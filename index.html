@@ -1,0 +1,634 @@
+<!doctype html>
+<html class="scroll-smooth" lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
+    <title>TMT Maso - Sušíme maso, poctivě a s láskou.</title>
+    <link
+      rel="preload"
+      href="/assets/fonts/RobotoSlab-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/Kenyan%20Coffee%20Rg.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="overflow-x-hidden">
+    <!-- Announcement -->
+    <div class="p-3 bg-black text-[#8d8d8d] text-center">
+      Prohlédněte si naši aktuální
+      <a class="text-[#c7c0b8] hover:text-[#f0f0e4]" href=""><b>nabídku</b></a
+      >!
+    </div>
+
+    <!-- Header -->
+    <header
+      class="relative overflow-hidden bg-[url('/assets/header.jpg')] bg-cover bg-no-repeat bg-center xl:bg-right min-h-[560px] sm:min-h-[760px] xl:min-h-[100svh] w-full before:content-[''] before:absolute before:inset-0 before:pointer-events-none before:bg-[linear-gradient(to_bottom,color-mix(in_oklab,#183145_60%,#0000001a)_0%,color-mix(in_oklab,_#183145_60%,_#0000001a)_55%,color-mix(in_oklab,_#183145_30%,_#0000001a)_100%)]"
+    >
+      <div
+        class="relative overflow-hidden bg-center xl:bg-right min-h-[560px] sm:min-h-[760px] xl:min-h-[100svh] w-full bg-cover bg-no-repeat bg-[url('/assets/headerProductsNew.png')]"
+      >
+        <!-- Nav -->
+        <nav class="left-0 top-0 w-full">
+          <div
+            class="mx-auto sm:max-w-[1220px] flex md:items-center justify-between px-4 md:px-10"
+          >
+            <a href="/" aria-label="TMT Maso">
+              <img
+                class="mt-4 md:mt-12 drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] w-[140px] md:w-[180px]"
+                width="180"
+                height="180"
+                src="/assets/logo_old.png"
+                alt="Logo TMT maso"
+              />
+            </a>
+
+            <!-- Desktop -->
+            <ul class="hidden md:flex items-center gap-10">
+              <li>
+                <a
+                  href="#o-nas"
+                  class="md:relative md:top-[-34px] font-['Roboto_Slab'] text-sm tracking-wider text-[#c7c0b8]/70 hover:text-[#c7c0b8] transition-colors"
+                  >O nás</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#produkty"
+                  class="md:relative md:top-[-34px] font-['Roboto_Slab'] text-sm tracking-wider text-[#c7c0b8]/70 hover:text-[#c7c0b8] transition-colors"
+                  >Produkty</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#kontakt"
+                  class="md:relative md:top-[-34px] font-['Roboto_Slab'] text-sm tracking-wider text-[#c7c0b8]/70 hover:text-[#c7c0b8] transition-colors"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+
+            <details
+              class="md:hidden group bg-cover bg-no-repeat relative mt-4 z-[1]"
+            >
+              <summary
+                class="list-none cursor-pointer inline-flex items-center justify-center rounded-lg p-2 text-[#c7c0b8]/80 hover:text-[#c7c0b8] hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white/20 [&::-webkit-details-marker]:hidden"
+                aria-label="Menu"
+              >
+                <svg
+                  class="h-6 w-6 transition-transform duration-200 group-open:rotate-90"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="M4 6h16"></path>
+                  <path d="M4 12h16"></path>
+                  <path d="M4 18h16"></path>
+                </svg>
+              </summary>
+
+              <div
+                class="absolute right-0 mt-2 w-[min(92vw,270px)] rounded-xl border border-white/10 bg-black/80 backdrop-blur-sm shadow-[0_10px_30px_rgba(0,0,0,.45)] overflow-hidden"
+              >
+                <a
+                  href="#o-nas"
+                  class="block px-4 py-3 font-['Roboto_Slab'] tracking-wider text-[#c7c0b8]/80 hover:text-[#c7c0b8] hover:bg-white/5"
+                  >O nás</a
+                >
+                <a
+                  href="#produkty"
+                  class="block px-4 py-3 font-['Roboto_Slab'] tracking-wider text-[#c7c0b8]/80 hover:text-[#c7c0b8] hover:bg-white/5"
+                  >Produkty</a
+                >
+                <a
+                  href="#kontakt"
+                  class="block px-4 py-3 font-['Roboto_Slab'] tracking-wider text-[#c7c0b8]/80 hover:text-[#c7c0b8] hover:bg-white/5"
+                  >Kontakt</a
+                >
+              </div>
+            </details>
+          </div>
+        </nav>
+
+        <!-- Fire - Keeping this hidden until we land on final header, positioning this is a pain an I'm not doing it! -->
+        <div
+          class="hidden opacity-[.2] z-[2] absolute top-[96px] w-[300px] h-[500px] left-[calc(50%-370px)] sm:left-[calc(50%-220px)] sm:top-[156px] md:left-[-70px] lg:left-auto lg:right-[min(92vw,930px)] md:top-[146px] lg:top-[396px] -translate-x-1/2 -translate-y-1/2"
+        >
+          <div id="flames" class="animatedParts"></div>
+          <div id="core" class="animatedParts"></div>
+        </div>
+
+        <!-- Header content -->
+        <div class="inset-x-0 mt-9">
+          <div class="mx-auto sm:max-w-[1220px] relative">
+            <div
+              class="px-4 lg:px-10 left-0 top-[240px] sm:top-[330px] sm:max-w-[690px] text-[#f0f0e4] text-[16px] sm:text-[18px] leading-5 sm:leading-7 font-['Roboto_Slab']"
+            >
+              <h1
+                class="font-['Kenyan_Coffee_Rg'] text-[44px] md:text-[58px] lg:text-[74px] leading-[54px] md:leading-[68px] lg:leading-[84px] uppercase tracking-[-1px] mb-[12px] sm:mb-[18px]"
+              >
+                Sušíme maso,<br />poctivě a s láskou.
+              </h1>
+              <p class="max-w-[320px] sm:max-w-[440px] text-[#f0f0e4]">
+                Každý kousek připravujeme ručně a&nbsp;sušíme s&nbsp;maximální
+                pečlivostí. Díky tomu chutná přesně tak, jak má – krutopřísně
+                dobře!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="relative bg-[#252525] bg-[url('/assets/texture.png')] bg-repeat min-h-[100svh] before:content-[''] before:absolute before:top-[-120px] before:left-0 before:right-0 before:h-[120px] before:bg-[#252525] before:bg-[url('/assets/texture.png')] before:bg-[length:600px] before:pointer-events-none before:z-[1] before:[-webkit-mask-image:url('/assets/torn.svg')] before:[-webkit-mask-repeat:no-repeat] before:[-webkit-mask-position:top_center] before:[-webkit-mask-size:cover] before:[mask-image:url('/assets/torn.svg')] before:[mask-repeat:no-repeat] before:[mask-position:top_center] before:[mask-size:cover]"
+    >
+      <div class="relative mb-16">
+        <!-- About -->
+        <div
+          id="o-nas"
+          class="flex gap-15 xl:gap-[98px] items-center pt-2 lg:pt-[26px] justify-center"
+        >
+          <img
+            class="hidden sm:inline-block sm:w-60 md:w-90 xl:w-120 sm:p-8 drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.3)]"
+            src="/assets/jerkyAbout.png"
+            width="320"
+            alt=""
+          />
+          <div class="p-8 sm:p-0">
+            <h2
+              class="font-['Kenyan_Coffee_Rg'] text-[54px] leading-[58px] uppercase tracking-[-1px] mb-8 text-[#f0f0e4] text-center sm:text-left"
+            >
+              O nás
+            </h2>
+            <p
+              class="sm:pr-8 xl:w-[520px] font-['Roboto_Slab'] text-[#8d8d8d] mb-3"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vestibulum leo ut dui congue, non elementum nisl bibendum.
+              Suspendisse imperdiet tristique viverra. Praesent ex mauris,
+              posuere a quam molestie, bibendum venenatis justo. Vestibulum in
+              consequat turpis.
+            </p>
+            <p class="sm:pr-8 xl:w-[520px] font-['Roboto_Slab'] text-[#8d8d8d]">
+              Cras mauris justo, sagittis at lorem commodo, eleifend sagittis
+              purus. Praesent ornare nulla ac metus finibus tincidunt. Donec
+              congue purus sed venenatis pellentesque. Fusce porttitor, augue in
+              consectetur vehicula, metus nibh auctor nisl, eu condimentum
+              libero ante nec ligula. Proin cursus vitae ipsum at euismod.
+            </p>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <div id="produkty" class="py-20 relative my-[92px] lg:my-[98px]">
+          <h2
+            class="px-8 md:px-0 font-['Kenyan_Coffee_Rg'] text-[54px] leading-[58px] uppercase tracking-[-1px] mb-30 text-[#f0f0e4] text-center sm:mb-40"
+          >
+            Naše nabídka
+          </h2>
+
+          <!-- BEEF -->
+          <div
+            class="relative py-[48px] md:py-[98px] bg-black/35 before:content-[''] before:absolute before:top-[-120px] before:left-0 before:right-0 before:h-[120px] before:bg-black/35 before:z-[1] before:[-webkit-mask-image:url('/assets/torn.svg')] before:[-webkit-mask-repeat:no-repeat] before:[-webkit-mask-position:top_center] before:[-webkit-mask-size:cover] before:[mask-image:url('/assets/torn.svg')] before:[mask-repeat:no-repeat] before:[mask-position:top_center] before:[mask-size:cover] after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-120px] after:h-[120px] after:bg-black/35 after:z-[2] after:pointer-events-none after:[-webkit-mask-image:url('/assets/tornDown.svg')] after:[-webkit-mask-repeat:no-repeat] after:[-webkit-mask-position:top_center] after:[-webkit-mask-size:cover] after:[mask-image:url('/assets/tornDown.svg')] after:[mask-repeat:no-repeat] after:[mask-position:top_center] after:[mask-size:cover]"
+          >
+            <div class="relative mx-auto xl:max-w-[1220px] sm:flex gap-6">
+              <div
+                class="relative sm:inline-block sm:flex-[1_1_30%] text-[#81394a]"
+              >
+                <div
+                  class="relative pt-9 h-full min-h-[150px] md:min-h-[250px] sm:min-h-[450px] w-full bg-no-repeat bg-[length:800px] font-['Kenyan_Coffee_Rg'] text-[44px] sm:text-[64px] leading-[44px] sm:leading-[64px] uppercase sm:bg-[url('/assets/bull.png')] bg-[position:50%_80px] sm:bg-[position:-434px_118px] md:bg-[position:-390px_78px] lg:bg-[position:-385px_78px] before:content-[''] before:absolute before:w-[60px] before:h-1 before:left-0 before:top-0 before:bg-[#f0f0e4] before:z-[2] after:content-[''] after:absolute after:w-[60px] after:h-1 after:left-1 after:top-1 after:bg-[#81394a] after:z-[1] before:ml-8 after:ml-8"
+                >
+                  <h3
+                    class="relative ml-8 before:content-[attr(data-text)] before:absolute before:left-[-4px] before:top-[-4px] before:text-[#f0f0e4]"
+                    data-text="Hovězí"
+                  >
+                    Hovězí
+                  </h3>
+                </div>
+              </div>
+
+              <div
+                class="grid px-8 xl:px-0 lg:grid-cols-2 xl:grid-cols-3 gap-4 text-[#81394a]"
+              >
+                <div
+                  class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+                >
+                  <img
+                    class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                    width="130"
+                    height="227"
+                    src="/assets/beefKlasik.png"
+                    alt=""
+                  />
+                  <h4
+                    class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#81394a]"
+                  >
+                    Klasik
+                  </h4>
+                  <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                    Hovězí váleček, kečup sladký, pepř černý...
+                  </p>
+                </div>
+
+                <div
+                  class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+                >
+                  <img
+                    class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                    width="130"
+                    height="227"
+                    src="/assets/beefHamburger.png"
+                    alt=""
+                  />
+                  <h4
+                    class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#81394a]"
+                  >
+                    Hamburger
+                  </h4>
+                  <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                    Hovězí váleček, kečup sladký, hořčice dijonská, worcester...
+                  </p>
+                </div>
+
+                <div
+                  class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+                >
+                  <img
+                    class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                    width="130"
+                    height="227"
+                    src="/assets/beefSmoke.png"
+                    alt=""
+                  />
+                  <h4
+                    class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#81394a]"
+                  >
+                    Smoke
+                  </h4>
+                  <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                    Hovězí váleček, whiskey, worcester...
+                  </p>
+                </div>
+
+                <div
+                  class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+                >
+                  <img
+                    class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                    width="130"
+                    height="227"
+                    src="/assets/beefSmokeHot.png"
+                    alt=""
+                  />
+                  <h4
+                    class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#81394a]"
+                  >
+                    Smoke HOT
+                  </h4>
+                  <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                    Hovězí váleček, whiskey, chilli, worcester...
+                  </p>
+                </div>
+
+                <div
+                  class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+                >
+                  <img
+                    class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                    width="130"
+                    height="227"
+                    src="/assets/beefSulPepr.png"
+                    alt=""
+                  />
+                  <h4
+                    class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#81394a]"
+                  >
+                    Maldonská sůl &amp; Barevný pepř
+                  </h4>
+                  <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                    Hovězí váleček, sůl maldonská, pepř barevný...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PORK -->
+      <div class="relative mb-16">
+        <div
+          class="relative mx-auto xl:max-w-[1220px] flex flex-col-reverse sm:flex-row gap-6 py-[48px] md:py-[98px]"
+        >
+          <div
+            class="grid px-8 xl:px-0 gap-4 lg:justify-items-end [direction:rtl] text-[#c76e54] lg:grid-cols-2 xl:grid-cols-3"
+          >
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/porkKlasik.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#c76e54]"
+              >
+                Panenka Klasik
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Veprová pečeně, kečup sladký, pepř černý...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/porkTeriyaki.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#c76e54]"
+              >
+                Teriyaki
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Veprová pečeně, kečup sladký, hořčice dijonská, worcester...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/porkMustard.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#c76e54]"
+              >
+                Hořčice &amp; Cibule
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Veprová pečeně, whiskey, worcester...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/porkItalian.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#c76e54]"
+              >
+                iTalián
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Veprová pečeně, whiskey, chilli, worcester...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/porkShrooms.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#c76e54]"
+              >
+                Houby &amp; Cibulka
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Veprová pečeně, houby sušené mleté, cibule...
+              </p>
+            </div>
+          </div>
+
+          <div class="relative inline-block flex-[1_1_30%] text-[#c76e54]">
+            <div
+              class="relative pt-9 h-full min-h-[150px] md:min-h-[250px] sm:min-h-[450px] w-full bg-no-repeat font-['Kenyan_Coffee_Rg'] text-[44px] sm:text-[64px] leading-[44px] sm:leading-[64px] uppercase text-right sm:bg-[url('/assets/pig.png')] bg-[length:800px] bg-[position:-195px_60px] before:content-[''] before:absolute before:w-[60px] before:h-1 before:right-1 before:top-0 before:bg-[#f0f0e4] before:z-[2] before:mr-8 after:content-[''] after:absolute after:w-[60px] after:h-1 after:right-0 after:top-1 after:bg-[#c76e54] after:z-[1] after:mr-8"
+            >
+              <h3
+                class="relative mr-8 before:content-[attr(data-text)] before:absolute before:left-0 before:right-0 before:top-[-4px] before:text-[#f0f0e4]"
+                data-text="Vepřové"
+              >
+                Vepřové
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TURKEY -->
+      <div
+        class="relative mb-16 bg-black/35 before:content-[''] before:absolute before:top-[-120px] before:left-0 before:right-0 before:h-[120px] before:bg-black/35 before:z-[1] before:[-webkit-mask-image:url('/assets/torn.svg')] before:[-webkit-mask-repeat:no-repeat] before:[-webkit-mask-position:top_center] before:[-webkit-mask-size:cover] before:[mask-image:url('/assets/torn.svg')] before:[mask-repeat:no-repeat] before:[mask-position:top_center] before:[mask-size:cover] after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-[-120px] after:h-[120px] after:bg-black/35 after:z-[2] after:pointer-events-none after:[-webkit-mask-image:url('/assets/tornDown.svg')] after:[-webkit-mask-repeat:no-repeat] after:[-webkit-mask-position:top_center] after:[-webkit-mask-size:cover] after:[mask-image:url('/assets/tornDown.svg')] after:[mask-repeat:no-repeat] after:[mask-position:top_center] after:[mask-size:cover]"
+      >
+        <div
+          class="relative mx-auto xl:max-w-[1220px] flex flex-col sm:flex-row gap-6 py-[48px] md:py-[98px]"
+        >
+          <div class="relative inline-block flex-[1_1_30%] text-[#46976b]">
+            <div
+              class="relative pt-9 h-full min-h-[150px] md:min-h-[250px] sm:min-h-[450px] w-full sm:bg-position-[-300px_100px] md:bg-position-[-240px_100px] lg:bg-[position:-230px_54px] bg-no-repeat font-['Kenyan_Coffee_Rg'] text-[44px] sm:text-[64px] leading-[44px] sm:leading-[64px] uppercase sm:bg-[url('/assets/turkeyUp.png')] bg-[length:630px] before:content-[''] before:absolute before:w-[60px] before:h-1 before:left-0 before:top-0 before:bg-[#f0f0e4] before:z-[2] before:ml-8 after:content-[''] after:absolute after:w-[60px] after:h-1 after:left-1 after:top-1 after:bg-[#46976b] after:z-[1] after:ml-8"
+            >
+              <h3
+                class="relative ml-8 before:content-[attr(data-text)] before:absolute before:left-[-4px] before:top-[-4px] before:text-[#f0f0e4]"
+                data-text="Krůtí"
+              >
+                Krůtí
+              </h3>
+            </div>
+          </div>
+
+          <div
+            class="grid px-8 xl:px-0 gap-4 text-[#46976b] lg:grid-cols-2 xl:grid-cols-3"
+          >
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/packageNew.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#46976b]"
+              >
+                Med &amp; Chilli
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Krůtí prso, kečup sladký, pepř černý...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/packageNew.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#46976b]"
+              >
+                Cheese
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Krůtí prso, kečup sladký, hořčice dijonská, worcester...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/packageNew.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#46976b]"
+              >
+                Limetka &amp; Chilli paprička
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Krůtí prso, whiskey, worcester...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHICKEN -->
+      <div class="relative mb-0">
+        <div
+          class="relative mx-auto xl:max-w-[1220px] flex flex-col-reverse sm:flex-row gap-6 py-[48px] md:py-[98px]"
+        >
+          <div
+            class="grid px-8 xl:px-0 gap-4 lg:justify-items-end [direction:rtl] text-[#b18934] lg:grid-cols-2 xl:grid-cols-3"
+          >
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/packageNew.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#b18934]"
+              >
+                Med &amp; Chilli
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Krůtí prso, kečup sladký, pepř černý...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/packageNew.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#b18934]"
+              >
+                Cheese
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Krůtí prso, kečup sladký, hořčice dijonská, worcester...
+              </p>
+            </div>
+
+            <div
+              class="group w-full bg-cover bg-no-repeat relative rounded-[9px] p-[76px_24px_48px] text-[#f0f0e4] bg-[#252525] bg-[url('/assets/darkTexture.png')] bg-center drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.075)] [direction:ltr]"
+            >
+              <img
+                class="mx-auto drop-shadow-[0_4px_4px_hsl(0_0%_0%_/_0.5)] transition-[transform,filter] duration-200 group-hover:translate-y-[-6px] group-hover:rotate-[-1deg] group-hover:scale-[1.04] group-hover:[filter:drop-shadow(0_18px_28px_rgba(0,0,0,.55))]"
+                width="130"
+                height="227"
+                src="/assets/packageNew.png"
+                alt=""
+              />
+              <h4
+                class="relative font-['Kenyan_Coffee_Rg'] text-[32px] leading-[1.1] uppercase tracking-[1px] mb-2 before:content-[''] before:block before:mt-9 before:mb-4 before:w-10 before:h-[3px] before:bg-[#b18934]"
+              >
+                Limetka &amp; Chilli paprička
+              </h4>
+              <p class="font-['Roboto_Slab'] text-[#8d8d8d]">
+                Krůtí prso, whiskey, worcester...
+              </p>
+            </div>
+          </div>
+
+          <div class="relative inline-block flex-[1_1_30%] text-[#b18934]">
+            <div
+              class="relative pt-9 h-full min-h-[150px] md:min-h-[250px] sm:min-h-[450px] w-full bg-no-repeat font-['Kenyan_Coffee_Rg'] text-[44px] sm:text-[64px] leading-[44px] sm:leading-[64px] uppercase text-right sm:bg-[url('/assets/chickenDown.png')] bg-[length:630px] bg-[position:-120px_88px] before:content-[''] before:absolute before:w-[60px] before:h-1 before:right-1 before:top-0 before:bg-[#f0f0e4] before:z-[2] before:mr-8 after:content-[''] after:absolute after:w-[60px] after:h-1 after:right-0 after:top-1 after:bg-[#b18934] after:z-[1] after:mr-8"
+            >
+              <h3
+                class="relative mr-8 before:content-[attr(data-text)] before:absolute before:left-0 before:right-0 before:top-[-4px] before:text-[#f0f0e4]"
+                data-text="Kuřecí"
+              >
+                Kuřecí
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      id="kontakt"
+      class="p-9 bg-black text-[#8d8d8d] text-center font-['Roboto_Slab']"
+    >
+      <b>Kontaktujte nás:</b> TMT Maso - Chlumecka 1, Chlumec
+    </footer>
+  </body>
+</html>
