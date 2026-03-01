@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Kenyan Coffee Rg";
-  src: url("/assets/fonts/Kenyan Coffee Rg.otf") format("opentype");
+  src: url("./assets/fonts/Kenyan Coffee Rg.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Roboto Slab";
-  src: url("/assets/fonts/RobotoSlab-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/RobotoSlab-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,17 +26,17 @@
 }
 
 #core {
-  background: url("https://hitokageproduction.com/img/articles/core.webp");
-  -webkit-mask-image: url("https://hitokageproduction.com/img/articles/maskCore.webp");
-  mask-image: url("/assets/maskFlame.webp");
+  background: url("./assets/core.webp");
+  -webkit-mask-image: url("./assets/maskCore.webp");
+  mask-image: url("./assets/maskFlame.webp");
   filter: sepia(100%) saturate(10000%) hue-rotate(314deg)
     drop-shadow(20px 20px 80px rgba(255, 255, 220, 0.8));
 }
 
 #flames {
-  background: url("https://hitokageproduction.com/img/articles/flamesExtra.webp");
-  -webkit-mask-image: url("/assets/maskFlame.webp");
-  mask-image: url("https://hitokageproduction.com/img/articles/maskFlame.webp");
+  background: url("./assets/flamesExtra.webp");
+  -webkit-mask-image: url("./assets/maskFlame.webp");
+  mask-image: url("./assets/maskFlame.webp");
   filter: sepia(100%) saturate(10000%) hue-rotate(299deg)
     drop-shadow(20px 20px 50px rgba(255, 0, 0, 0.8));
 }
