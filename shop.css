@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Kenyan Coffee Rg";
+  src: url("./assets/fonts/Kenyan Coffee Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("./assets/fonts/RobotoSlab-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.wrap {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}

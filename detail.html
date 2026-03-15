@@ -1,0 +1,1064 @@
+<!doctype html>
+<html class="scroll-smooth" lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
+    <title>Hovězí Jerky Klasik / TMT Maso</title>
+    <link
+      rel="preload"
+      href="./assets/fonts/RobotoSlab-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Kenyan%20Coffee%20Rg.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+
+  <body
+    class="overflow-x-hidden color-[#221814] bg-[radial-gradient(circle_at_8%_7%,rgba(255,255,255,0.78),transparent_18%),radial-gradient(circle_at_90%_14%,rgba(181,58,45,0.08),transparent_20%),linear-gradient(180deg,#fcf8f2_0%,#f7efe4_100%)]"
+  >
+    <div
+      class="bg-[#fffcf88f] text-[#6f5a4d] text-center text-[12px] tracking-[0.08em] uppercase px-3 py-[10px] border-b border-[#3b241714]"
+    >
+      <div class="wrap">Doprava zdarma při objednávce nad 1200 Kč!</div>
+    </div>
+    <div class="wrap">
+      <!-- Header -->
+      <header
+        class="md:py-6 flex flex-col items-center md:flex-row md:justify-between md:items-center"
+      >
+        <!-- Page Logo -->
+        <a href="/" aria-label="TMT Maso">
+          <img
+            class="mb-10 md:mb-0 w-[120px] md:w-[140px]"
+            width="70"
+            height="70"
+            src="./assets/logo_old.png"
+            alt="Logo TMT maso"
+          />
+        </a>
+        <!-- Search Bar -->
+        <form
+          class="md:w-full md:max-w-[380px] lg:max-w-[560px] w-[calc(100%+48px)] p-[24px] md:p-0 bg-[#f8f1e9] md:bg-transparent"
+          role="search"
+        >
+          <label for="site-search" class="sr-only">Hledat na webu</label>
+
+          <div
+            class="flex items-center gap-2 rounded-2xl bg-[#f8f5f2] p-1.5 ring-1 ring-stone-200"
+          >
+            <input
+              id="site-search"
+              type="search"
+              placeholder="Napište, co hledáte"
+              class="h-11 w-full bg-transparent px-4 text-sm text-stone-800 placeholder:text-stone-400 focus:outline-none"
+            />
+
+            <button
+              type="submit"
+              class="cursor-pointer flex h-11 items-center justify-center rounded-xl bg-[#231714] px-5 text-white transition hover:bg-[#3b2d29] focus:outline-none focus:ring-2 focus:ring-[#231714]/30"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="h-5 w-5"
+              >
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.5-3.5"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Cart component - Empty state - remove `hidden` class from parent to see! -->
+        <div class="relative group hidden">
+          <!-- Trigger -->
+          <a href="/kosik">
+            <button
+              type="button"
+              class="flex items-center gap-3 py-2.5 focus:outline-none cursor-pointer"
+              aria-label="Košík"
+            >
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-xl bg-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-5 w-5 text-[#231714]"
+                >
+                  <path
+                    d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7"
+                  />
+                  <circle cx="10" cy="19" r="1.5" />
+                  <circle cx="17" cy="19" r="1.5" />
+                </svg>
+              </div>
+
+              <div class="text-left leading-tight">
+                <div class="text-xs uppercase tracking-[0.08em] text-stone-500">
+                  Košík
+                </div>
+                <div class="text-sm font-medium text-stone-800">
+                  Prázdný košík
+                </div>
+              </div>
+            </button>
+          </a>
+          <!-- Hover dropdown -->
+          <div
+            class="invisible absolute right-0 top-full z-50 pt-3 opacity-0 transition duration-200 sm:group-hover:visible sm:group-hover:opacity-100 sm:group-focus-within:visible sm:group-focus-within:opacity-100"
+          >
+            <div
+              class="w-[320px] translate-y-2 rounded-2xl bg-white p-5 text-center shadow-[0_18px_40px_rgba(0,0,0,0.14)] ring-1 ring-stone-200 transition duration-200 group-hover:translate-y-0 group-focus-within:translate-y-0"
+            >
+              <div
+                class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f8f5f2] ring-1 ring-stone-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-6 w-6 text-[#231714]"
+                >
+                  <path
+                    d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7"
+                  />
+                  <circle cx="10" cy="19" r="1.5" />
+                  <circle cx="17" cy="19" r="1.5" />
+                </svg>
+              </div>
+
+              <h3 class="text-base font-semibold text-stone-900">
+                Prázdný košík
+              </h3>
+              <p class="mt-2 text-sm text-stone-500">
+                Zatím jste nepřidali žádné produkty.
+              </p>
+
+              <a
+                href="/kosik"
+                class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#231714] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#3b2d29] focus:outline-none focus:ring-2 focus:ring-[#231714]/30"
+              >
+                Pokračovat do košíku
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart component - Non-empty state -->
+        <div class="relative group order-first md:order-none ml-auto md:ml-0">
+          <!-- Trigger -->
+          <a href="/kosik">
+            <button
+              type="button"
+              class="flex items-center gap-3 py-2.5 focus:outline-none cursor-pointer"
+              aria-label="Košík"
+            >
+              <div
+                class="relative flex h-10 w-10 md:h-10 md:w-10 items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-10 w-10 md:h-5 md:w-5 text-[#231714]"
+                >
+                  <path
+                    d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7"
+                  />
+                  <circle cx="10" cy="19" r="1.5" />
+                  <circle cx="17" cy="19" r="1.5" />
+                </svg>
+
+                <!-- Badge -->
+                <span
+                  class="absolute -right-0.5 -top-0.5 inline-flex min-h-[20px] min-w-[20px] items-center justify-center rounded-full bg-[#231714] px-1.5 text-[11px] font-semibold leading-none text-white"
+                >
+                  2
+                </span>
+              </div>
+
+              <div class="hidden md:inline-block text-left leading-tight">
+                <div class="text-xs uppercase tracking-[0.08em] text-stone-500">
+                  Košík
+                </div>
+                <div class="text-sm font-medium text-stone-800">340 Kč</div>
+              </div>
+            </button>
+          </a>
+
+          <!-- Hover dropdown -->
+          <div
+            class="invisible absolute right-0 top-full z-50 pt-3 opacity-0 transition duration-200 sm:group-hover:visible group-hover:opacity-100 sm:group-focus-within:visible sm:group-focus-within:opacity-100"
+          >
+            <div
+              class="w-[360px] translate-y-2 rounded-2xl bg-white p-4 shadow-[0_18px_40px_rgba(0,0,0,0.14)] ring-1 ring-stone-200 transition duration-200 group-hover:translate-y-0 group-focus-within:translate-y-0"
+            >
+              <div class="mb-3 flex items-center justify-between">
+                <h3 class="text-sm font-semibold text-stone-900">Váš košík</h3>
+                <span class="text-xs text-stone-500">2 položky</span>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex gap-3 bg-[#f8f5f2] p-2.5">
+                  <img
+                    src="./assets/medChilliTurkeyHQ.png"
+                    alt="Krůtí sušené maso"
+                    class="h-auto w-12 object-contain"
+                  />
+                  <div class="min-w-0 flex-1">
+                    <div class="truncate text-sm font-medium text-stone-900">
+                      Krůtí sušené maso - solené
+                    </div>
+                    <div class="mt-0.5 text-xs text-stone-500">
+                      1 ks · 170 Kč
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 bg-[#f8f5f2] p-2.5">
+                  <img
+                    src="./assets/medChilliTurkeyHQ.png"
+                    alt="Hovězí sušené maso"
+                    class="h-auto w-12 object-contain"
+                  />
+                  <div class="min-w-0 flex-1">
+                    <div class="truncate text-sm font-medium text-stone-900">
+                      Hovězí sušené maso - chilli
+                    </div>
+                    <div class="mt-0.5 text-xs text-stone-500">
+                      1 ks · 170 Kč
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-4 h-px bg-stone-200"></div>
+
+              <div class="mb-4 flex items-center justify-between">
+                <span class="text-sm text-stone-500">Celkem</span>
+                <span class="text-lg font-semibold text-stone-900">340 Kč</span>
+              </div>
+
+              <a
+                href="/kosik"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#231714] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#3b2d29] focus:outline-none focus:ring-2 focus:ring-[#231714]/30"
+              >
+                Pokračovat do košíku
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="bg-[#231714] text-[#fff8f1]">
+      <div class="wrap py-[10px]">
+        <!-- Desktop -->
+        <ul
+          class="hidden md:flex items-center gap-8 text-center text-[12px] font-bold uppercase tracking-[0.08em]"
+        >
+          <li><a href="" class="hover:opacity-80">Hovězí sušené maso</a></li>
+          <li><a href="" class="hover:opacity-80">Vepřové sušené maso</a></li>
+          <li><a href="" class="hover:opacity-80">Krůtí sušené maso</a></li>
+          <li><a href="" class="hover:opacity-80">Kuřecí sušené maso</a></li>
+          <li><a href="" class="hover:opacity-80">Dárkové balíčky</a></li>
+          <li><a href="" class="hover:opacity-80">Ostatní</a></li>
+        </ul>
+
+        <!-- Mobile -->
+        <details class="relative md:hidden group">
+          <summary
+            class="flex cursor-pointer items-center justify-end p-2 [&::-webkit-details-marker]:hidden"
+          >
+            <svg
+              class="h-6 w-6 transition-transform duration-200 group-open:rotate-90"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M4 6h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 18h16"></path>
+            </svg>
+          </summary>
+
+          <div class="my-2 overflow-hidden rounded-md bg-[#231714]">
+            <a
+              href=""
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Hovězí sušené maso</a
+            >
+            <a
+              href=""
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Vepřové sušené maso</a
+            >
+            <a
+              href=""
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Krůtí sušené maso</a
+            >
+            <a
+              href=""
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Kuřecí sušené maso</a
+            >
+            <a
+              href=""
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Dárkové balíčky</a
+            >
+            <a
+              href=""
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Ostatní</a
+            >
+          </div>
+        </details>
+      </div>
+    </nav>
+
+    <div class="wrap py-[34px] md:px-8 lg:px-0">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs text-[#6f5a4d] mb-10">
+        <a
+          href=""
+          class="relative inline-block pb-[2px] after:content-['/'] after:ml-2 after:opacity-[0.42]"
+          >Domů</a
+        >
+        <a
+          href=""
+          class="relative inline-block pb-[2px] after:content-['/'] after:ml-2 after:opacity-[0.42]"
+          >Hovězí</a
+        >
+        <span>Maldonská sůl &amp; barevný pepř</span>
+      </div>
+
+      <section
+        class="p-[8px 0 86px] md:grid md:grid-cols-[minmax(0,1.03fr)_minmax(0,0.97fr)] gap-16 items-center mb-20"
+      >
+        <!-- Main image -->
+        <div
+          class="relative min-h-[330px] sm:min-h-[430px] md:min-h-[470px] xl:min-h-[700px]"
+        >
+          <div
+            class="absolute inset-0 before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:top-[6%] before:w-[340px] before:h-[94%] sm:before:h-[78%] md:before:w-[88%] md:before:h-[82%] xl:before:h-[84%] before:bg-[linear-gradient(180deg,rgba(255,250,244,0.98),rgba(241,231,216,0.95))] before:[border-radius:38%_62%_54%_46%_/_43%_37%_63%_57%] before:shadow-[0_22px_55px_rgba(45,25,15,0.10)]"
+          ></div>
+
+          <div
+            class="absolute inset-0 after:content-[''] after:absolute after:left-1/2 after:translate-x-[10px] sm:after:right-[5%] after:bottom-[7%] after:w-[110px] md:after:w-[180px] xl:after:w-[42%] after:h-[72px] sm:after:h-[19%] md:after:h-[23%] xl:after:h-[26%] after:bg-[rgba(182,58,45,0.09)] after:[border-radius:59%_41%_48%_52%_/_54%_47%_53%_46%] after:-rotate-[7deg]"
+          ></div>
+
+          <div
+            class="absolute right-1/2 translate-x-[98px] sm:-translate-x-[98px] md:translate-x-0 sm:right-[12%] md:right-[14%] sm:left-auto xl:right-[14%] top-[12%] sm:top-[14%] md:top-[16%] z-[5] min-w-[56px] md:min-w-[96px] text-center px-3 py-2 sm:px-3.5 sm:py-2.5 md:px-4 md:py-3 rounded-full bg-[rgba(35,25,21,0.92)] text-[#fffaf5] font-['Roboto_Slab',Georgia,serif] text-[16px] sm:text-[20px] md:text-[28px] leading-none tracking-[0.03em] shadow-[0_12px_28px_rgba(45,25,15,0.08)]"
+          >
+            50 g
+          </div>
+
+          <img
+            class="absolute left-1/2 -translate-x-1/2 md:translate-none md:left-[16%] top-[14%] sm:top-[15%] md:top-[16%] w-auto max-h-[240px] sm:max-h-[340px] md:max-w-[320px] xl:max-h-full xl:max-w-[340px] xl:w-[340px] xl:h-auto -rotate-[4deg] drop-shadow-[0_28px_26px_rgba(54,33,18,0.16)] z-[3]"
+            src="./assets/medChilliTurkeyHQ.png"
+            alt="Hovězí jerky Maldonská sůl a barevný pepř"
+          />
+
+          <img
+            class="absolute left-1/2 -translate-x-[10%] sm:-right-[2%] md:-right-[5%] bottom-[6%] sm:bottom-[7%] md:bottom-[8%] w-[34%] md:w-[200px] min-w-[120px] max-w-[160px] sm:max-w-[220px] md:max-w-[300px] xl:w-[360px] -rotate-[4deg] drop-shadow-[0_28px_26px_rgba(54,33,18,0.16)] z-[3]"
+            src="./assets/meatPile.png"
+            alt=""
+          />
+        </div>
+        <!-- Product Copy -->
+        <div class="max-w-[510px]">
+          <!-- Beef: bg-[rgba(182,58,45,0.12)] text-[#b63a2d] -->
+          <!-- Pork: text-[#b97a6b] bg-[rgba(185,122,107,0.12)] -->
+          <!-- Turkey: bg-[rgba(53,122,86,0.12)] text-[#357a56] -->
+          <!-- Chicken: bg-[rgba(146,111,34,0.12)] text-[#926f22] -->
+          <div
+            class="inline-block mb-[24px] px-[14px] py-2 rounded-full bg-[rgba(182,58,45,0.12)] text-[#b63a2d] text-[13px] tracking-[0.08em] uppercase"
+          >
+            Hovězí jerky
+          </div>
+          <h1
+            class="mb-[38px] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(52px,7vw,88px)] leading-[0.92] font-normal tracking-[0.01em] text-balance"
+          >
+            Maldonská sůl &amp; barevný pepř
+          </h1>
+          <p class="text-[17px] text-[#6b5d53] mb-7 max-w-[36ch]">
+            Čistší chuť, méně omáček, víc masa. Pro chvíle, kdy má hlavní slovo
+            samotné hovězí a jen lehce ho nakopne sůl a pepř.
+          </p>
+          <div class="flex items-baseline gap-[14px] mb-[28px]">
+            <div
+              class="font-['Roboto_Slab',Georgia,serif] text-[50px] font-bold"
+            >
+              149&nbsp;Kč
+            </div>
+            <div class="text-[#6b5d53] text-[14px]">za 50 g balení</div>
+          </div>
+          <div class="mb-[10px] text-[#6b5d53] text-[14px]">
+            Vyber si gramáž:
+          </div>
+          <div class="flex gap-[10px] mb-[22px]">
+            <button
+              class="border border-[rgba(62,40,27,0.14)] bg-[rgba(255,255,255,0.68)] rounded-full px-[18px] py-[11px] text-[16px] text-[#231915] cursor-pointer transition duration-[180ms] ease-in-out"
+              type="button"
+            >
+              15 g
+            </button>
+            <button
+              class="border rounded-full px-[18px] py-[11px] text-[16px] transition duration-[180ms] ease-in-out bg-[#231915] border-[#231915] text-[#fffaf5] -translate-y-px"
+              type="button"
+            >
+              50 g
+            </button>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row gap-[14px] md:gap-[12px] mb-[14px]"
+          >
+            <div
+              class="max-w-[320px] inline-flex items-center justify-between border-[#d8c6b4] rounded-full bg-[#fffdf8] overflow-hidden"
+              aria-label="Počet kusů"
+            >
+              <button
+                type="button"
+                class="w-[46px] h-[50px] border-0 bg-transparent text-center text-[#231915] cursor-pointer"
+              >
+                −
+              </button>
+              <input
+                value="1"
+                inputmode="numeric"
+                aria-label="Počet"
+                class="w-[46px] h-[50px] border-0 bg-transparent text-center text-[#231915]"
+              />
+              <button
+                type="button"
+                class="w-[46px] h-[50px] border-0 bg-transparent text-center text-[#231915] cursor-pointer"
+              >
+                +
+              </button>
+            </div>
+            <button
+              class="relative overflow-hidden h-[50px] min-w-[220px] max-w-[320px] border-0 rounded-full px-[26px] bg-[linear-gradient(135deg,#b6402c,#8f2f21)] text-[#fff7ef] font-extrabold text-[16px] tracking-[0.01em] shadow-[0_8px_16px_rgba(182,64,44,0.22)] cursor-pointer transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-105 active:translate-y-0 before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,0.16)_50%,transparent_80%)] before:translate-x-[-120%] before:transition-transform before:duration-500 hover:before:translate-x-[120%]"
+              type="button"
+            >
+              Přidat do košíku
+            </button>
+          </div>
+          <div class="text-[#6b5d53] text-[14px] mb-12">
+            <strong>Skladem.</strong> Posíláme rychle, protože čekat na jerky je
+            otrava.
+          </div>
+          <div
+            class="grid grid-cols-3 gap-[14px] max-w-[640px] mb-5 pt-[14px] border-t border-[rgba(60,37,23,0.12)]"
+          >
+            <article>
+              <strong class="block mb-1 text-[15px] leading-[1.45]"
+                >Ruční výroba</strong
+              >
+              <span class="block text-[#6b5d53] text-[13px] leading-[1.7]"
+                >Krátké série, žádný pás.</span
+              >
+            </article>
+            <article>
+              <strong class="block mb-1 text-[15px] leading-[1.45]"
+                >Poctivé složení</strong
+              >
+              <span class="block text-[#6b5d53] text-[13px] leading-[1.7]"
+                >Maso hraje první ligu.</span
+              >
+            </article>
+            <article>
+              <strong class="block mb-1 text-[15px] leading-[1.45]"
+                >Lokální značka</strong
+              >
+              <span class="block text-[#6b5d53] text-[13px] leading-[1.7]"
+                >Malý shop, velká chuť.</span
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-[86px]">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] gap-6 lg:gap-8 items-start"
+        >
+          <!-- Left column -->
+          <article class="mb-12 relative overflow-hidden md:p-8 lg:p-0">
+            <h3
+              class="mb-7 md:mb-10 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(34px,4.6vw,58px)] leading-[1] text-[#231915]"
+            >
+              Detailní popis produktu
+            </h3>
+
+            <div class="space-y-4 text-[16px] leading-[1.8] text-[#6b5d53]">
+              <p>
+                Tahle varianta je postavená na jednoduchosti. Hlavní roli tu
+                hraje poctivé hovězí maso, které doplňuje jen křupavá sůl a
+                lehce aromatický barevný pepř. Výsledkem je čistší, sušší a
+                dospělejší chuť bez zbytečně těžké marinády.
+              </p>
+
+              <p>
+                Hodí se pro ty, kdo chtějí jerky, které nepřebije omáčka ani
+                cukr. Skvěle funguje jako rychlá svačina na cesty, k pivu, do
+                práce nebo prostě ve chvíli, kdy chceš něco slaného a skutečně
+                masového.
+              </p>
+
+              <p>
+                Díky vyváženému dochucení je to zároveň jedna z
+                nejuniverzálnějších příchutí v nabídce. Neútočí, ale rozhodně
+                není nudná.
+              </p>
+            </div>
+          </article>
+
+          <!-- Right column -->
+          <aside class="relative overflow-hidden md:p-8 lg:p-0">
+            <h3
+              class="mb-7 md:mb-10 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(34px,4.6vw,58px)] leading-[1] text-[#231915]"
+            >
+              Ingredience a alergeny
+            </h3>
+
+            <div class="space-y-5">
+              <div class="bg-white/70 p-5 py-10">
+                <div
+                  class="mb-2 text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  Složení
+                </div>
+                <p class="text-[16px] leading-[1.75] text-[#231915]">
+                  98,5% hovězí maso, 1% jedlá sůl, 0,5% barevný pepř.
+                </p>
+                <div
+                  class="mt-6 mb-2 text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  Min. trvanlivost
+                </div>
+                <p class="mb-4 text-[16px] leading-[1.75] text-[#231915]">
+                  1 rok
+                </p>
+                <div
+                  class="mt-6 mb-2 text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  Nutriční hodnoty na 100 g
+                </div>
+                <p class="mb-1 text-[16px] leading-[1.75] text-[#231915]">
+                  Energetická hodnota 2254,9kJ / 538,9kcal
+                </p>
+                <p class="mb-1 text-[16px] leading-[1.75] text-[#231915]">
+                  Tuky 15,5g (z toho nasycené mastné kyseliny 5,4g)
+                </p>
+                <p class="mb-1 text-[16px] leading-[1.75] text-[#231915]">
+                  Sacharidy 0,2g (z toho cukry 0g)
+                </p>
+                <p class="mb-1 text-[16px] leading-[1.75] text-[#231915]">
+                  Proteiny 66,6g
+                </p>
+                <p class="mb-1 text-[16px] leading-[1.75] text-[#231915]">
+                  Sůl 4,3g
+                </p>
+                <div
+                  class="mt-6 mb-2 text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  Obsah lepku
+                </div>
+                <p class="text-[16px] leading-[1.75] text-[#231915]">
+                  Bez lepku
+                </p>
+                <div
+                  class="mt-6 mb-2 text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  Alergeny
+                </div>
+                <p class="text-[16px] leading-[1.75] text-[#231915]">
+                  Tento produkt přirozeně neobsahuje běžné alergeny.
+                </p>
+                <p class="mt-2 text-[14px] leading-[1.7] text-[#6b5d53]">
+                  Může obsahovat stopy alergenů... doplnit.
+                </p>
+              </div>
+
+              <div
+                class="pt-[14px] border-t border-[rgba(60,37,23,0.12)] text-[14px] leading-[1.75] text-[#6b5d53]"
+              >
+                Skladujte v suchu a chraňte před přímým sluncem. Po otevření
+                spotřebujte do 24 hodin.
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="pb-[96px] md:px-8 lg:px-0">
+        <div class="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <h2
+              class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(34px,4.6vw,58px)] leading-[1] text-[#231915]"
+            >
+              Mohlo by ti chutnat i tohle
+            </h2>
+            <p class="mt-4 text-[16px] leading-[1.75] text-[#6b5d53]">
+              Další poctivé kousky z naší nabídky. Podobný charakter, jiná
+              nálada.
+            </p>
+          </div>
+
+          <a
+            href=""
+            class="hidden md:inline-flex items-center gap-2 rounded-full px-4 py-3 text-[15px] text-[#231915] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            Zobrazit vše
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="h-4 w-4"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+          <!-- Card 1 -->
+          <article
+            class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            <div
+              class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(182,58,45,0.08)] blur-2xl"
+            ></div>
+
+            <a href="" class="block">
+              <div
+                class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+              >
+                <img
+                  src="./assets/medChilliTurkeyHQ.png"
+                  alt="Hovězí jerky chilli"
+                  class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
+                />
+              </div>
+
+              <div
+                class="inline-block mb-3 rounded-full bg-[rgba(182,58,45,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#b63a2d]"
+              >
+                Hovězí
+              </div>
+
+              <h3
+                class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+              >
+                Chilli klasik
+              </h3>
+
+              <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
+                Příjemně pálivá klasika, která pořád nechává vyniknout maso.
+              </p>
+            </a>
+
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div
+                  class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  od
+                </div>
+                <div
+                  class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
+                >
+                  149 Kč
+                </div>
+              </div>
+
+              <a
+                href=""
+                class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+              >
+                Detail
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            <div
+              class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(185,122,107,0.08)] blur-2xl"
+            ></div>
+
+            <a href="" class="block">
+              <div
+                class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+              >
+                <img
+                  src="./assets/medChilliTurkeyHQ.png"
+                  alt="Vepřové jerky uzené"
+                  class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
+                />
+              </div>
+
+              <div
+                class="inline-block mb-3 rounded-full bg-[rgba(185,122,107,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#b97a6b]"
+              >
+                Vepřové
+              </div>
+
+              <h3
+                class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+              >
+                Uzený pepř
+              </h3>
+
+              <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
+                Jemnější a kulatější chuť s lehce zauzeným dozvukem.
+              </p>
+            </a>
+
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div
+                  class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  od
+                </div>
+                <div
+                  class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
+                >
+                  139 Kč
+                </div>
+              </div>
+
+              <a
+                href=""
+                class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+              >
+                Detail
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article
+            class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            <div
+              class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(53,122,86,0.08)] blur-2xl"
+            ></div>
+
+            <a href="" class="block">
+              <div
+                class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+              >
+                <img
+                  src="./assets/medChilliTurkeyHQ.png"
+                  alt="Krůtí jerky bylinky"
+                  class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
+                />
+              </div>
+
+              <div
+                class="inline-block mb-3 rounded-full bg-[rgba(53,122,86,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#357a56]"
+              >
+                Krůtí
+              </div>
+
+              <h3
+                class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+              >
+                Zelené bylinky
+              </h3>
+
+              <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
+                Lehčí profil s jemnou bylinkovou linkou a čistým zakončením.
+              </p>
+            </a>
+
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div
+                  class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  od
+                </div>
+                <div
+                  class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
+                >
+                  129 Kč
+                </div>
+              </div>
+
+              <a
+                href=""
+                class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+              >
+                Detail
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article
+            class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            <div
+              class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(146,111,34,0.08)] blur-2xl"
+            ></div>
+
+            <a href="" class="block">
+              <div
+                class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+              >
+                <img
+                  src="./assets/medChilliTurkeyHQ.png"
+                  alt="Kuřecí jerky med a pepř"
+                  class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
+                />
+              </div>
+
+              <div
+                class="inline-block mb-3 rounded-full bg-[rgba(146,111,34,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#926f22]"
+              >
+                Kuřecí
+              </div>
+
+              <h3
+                class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+              >
+                Med &amp; pepř
+              </h3>
+
+              <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
+                Sladko-slané ladění s jemným kořeněným dozvukem.
+              </p>
+            </a>
+
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div
+                  class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  od
+                </div>
+                <div
+                  class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
+                >
+                  119 Kč
+                </div>
+              </div>
+
+              <a
+                href=""
+                class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+              >
+                Detail
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article
+            class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            <div
+              class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(182,58,45,0.08)] blur-2xl"
+            ></div>
+
+            <a href="" class="block">
+              <div
+                class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+              >
+                <img
+                  src="./assets/medChilliTurkeyHQ.png"
+                  alt="Hovězí jerky česnek"
+                  class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
+                />
+              </div>
+
+              <div
+                class="inline-block mb-3 rounded-full bg-[rgba(182,58,45,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#b63a2d]"
+              >
+                Hovězí
+              </div>
+
+              <h3
+                class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+              >
+                Česneková linka
+              </h3>
+
+              <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
+                Výraznější, voňavější varianta pro milovníky ostřejšího profilu.
+              </p>
+            </a>
+
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div
+                  class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  od
+                </div>
+                <div
+                  class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
+                >
+                  149 Kč
+                </div>
+              </div>
+
+              <a
+                href=""
+                class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+              >
+                Detail
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article
+            class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
+          >
+            <div
+              class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(35,25,21,0.06)] blur-2xl"
+            ></div>
+
+            <a href="" class="block">
+              <div
+                class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+              >
+                <img
+                  src="./assets/medChilliTurkeyHQ.png"
+                  alt="Dárkový balíček"
+                  class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
+                />
+              </div>
+
+              <div
+                class="inline-block mb-3 rounded-full bg-[rgba(35,25,21,0.08)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#231915]"
+              >
+                Dárkové balení
+              </div>
+
+              <h3
+                class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+              >
+                Startovací box
+              </h3>
+
+              <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
+                Mix oblíbených příchutí pro ochutnání nebo jako dárek.
+              </p>
+            </a>
+
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <div
+                  class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
+                >
+                  od
+                </div>
+                <div
+                  class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
+                >
+                  399 Kč
+                </div>
+              </div>
+
+              <a
+                href=""
+                class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+              >
+                Detail
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-8 md:hidden text-right">
+          <a
+            href=""
+            class="inline-flex items-center gap-2 rounded-full border border-[rgba(62,40,27,0.14)] bg-[rgba(255,255,255,0.62)] px-5 py-3 text-[15px] text-[#231915] transition duration-200 hover:bg-white"
+          >
+            Zobrazit vše
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="h-4 w-4"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer
+      class="p-9 bg-[#231714] text-[#fff8f1] text-center font-['Roboto_Slab']"
+    >
+      <div class="wrap">
+        <b>Kontaktujte nás:</b> TMT Maso - Chlumecka 1, Chlumec
+      </div>
+    </footer>
+  </body>
+</html>
