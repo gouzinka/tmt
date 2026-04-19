@@ -1,0 +1,1142 @@
+<!doctype html>
+<html class="scroll-smooth" lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
+    <title>Objednávka / TMT Maso</title>
+
+    <link
+      rel="preload"
+      href="./assets/fonts/RobotoSlab-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Kenyan%20Coffee%20Rg.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+
+  <body
+    class="overflow-x-hidden text-[#221814] bg-[radial-gradient(circle_at_8%_7%,rgba(255,255,255,0.78),transparent_18%),radial-gradient(circle_at_90%_14%,rgba(181,58,45,0.08),transparent_20%),linear-gradient(180deg,#fcf8f2_0%,#f7efe4_100%)]"
+  >
+    <div
+      class="border-b border-[#2d2827] bg-[linear-gradient(135deg,#b6402c,#8f2f21)] px-3 py-[10px] text-center text-[12px] uppercase tracking-[0.08em] text-[#fff8f1]"
+    >
+      <div class="wrap">Doprava zdarma při objednávce nad 1200 Kč!</div>
+    </div>
+
+    <div class="bg-[#211d1c]">
+      <div class="wrap">
+        <header
+          class="flex flex-col items-center md:flex-row md:items-center md:justify-between md:py-6"
+        >
+          <a href="/" aria-label="TMT Maso">
+            <img
+              class="mb-10 w-[180px] md:mb-0 md:w-[220px] [filter:drop-shadow(0_8px_18px_rgba(0,0,0,0.18))]"
+              src="./assets/logo.svg"
+              alt="Logo TMT maso"
+            />
+          </a>
+
+          <form
+            class="w-[calc(100%+48px)] px-[24px] pb-[24px] md:w-full md:max-w-[380px] md:px-0 md:pb-0 lg:max-w-[560px]"
+            role="search"
+          >
+            <label for="site-search" class="sr-only">Hledat na webu</label>
+
+            <div
+              class="flex items-center gap-2 rounded-full border border-[rgba(0,0,0,0.2)] bg-white/5 p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm"
+            >
+              <input
+                id="site-search"
+                name="q"
+                type="search"
+                placeholder="Napište, co hledáte"
+                class="h-11 w-full bg-transparent px-4 text-sm text-[#fff8f1] placeholder:text-[#b8aaa0] [color-scheme:dark] focus:outline-none"
+              />
+
+              <button
+                type="submit"
+                class="flex h-11 cursor-pointer items-center justify-center rounded-full bg-[linear-gradient(135deg,rgba(0,0,0,0.2),#231915)] px-5 text-[#fff8f1] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#b6402c]/40"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M20 20l-3.5-3.5"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </header>
+      </div>
+    </div>
+
+    <nav
+      class="border-t border-[#2d2827] bg-[#211d1c] text-[#fff8f1]"
+      aria-label="Hlavní navigace"
+    >
+      <div class="wrap py-[10px]">
+        <div class="hidden items-center md:flex">
+          <ul
+            id="desktop-nav-list"
+            class="flex min-w-0 flex-1 flex-nowrap items-center gap-6 overflow-hidden text-center text-[12px] font-bold uppercase tracking-[0.08em] lg:gap-8"
+          >
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Hovězí sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Vepřové sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Krůtí sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Kuřecí sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Dárkové balíčky
+              </a>
+            </li>
+            <li data-nav-item data-keep-visible="true" class="shrink-0">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 whitespace-nowrap bg-[#2d2827] px-3 py-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#fff3df] transition duration-200 hover:bg-[rgba(0,0,0,0.2)] hover:text-white shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+              >
+                Velikonoční nabídka
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Masové paštiky
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Masové zavařeniny
+              </a>
+            </li>
+          </ul>
+
+          <div
+            id="desktop-nav-more"
+            class="group relative ml-6 hidden shrink-0"
+          >
+            <button
+              type="button"
+              class="inline-flex items-center gap-1 py-2 text-[12px] font-bold uppercase tracking-[0.08em] hover:opacity-80 focus:outline-none"
+              aria-haspopup="true"
+            >
+              Ostatní
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="invisible absolute right-0 top-full z-50 pt-2 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+            >
+              <div
+                class="min-w-[260px] overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.94))] p-2 text-left normal-case shadow-[0_18px_40px_rgba(45,25,15,0.12)] backdrop-blur-sm"
+              >
+                <div id="desktop-nav-overflow-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <details class="group relative md:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-end p-2 [&::-webkit-details-marker]:hidden"
+            aria-label="Otevřít menu"
+          >
+            <svg
+              class="h-6 w-6 transition-transform duration-200 group-open:rotate-90"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 6h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 18h16"></path>
+            </svg>
+          </summary>
+
+          <div class="my-2 overflow-hidden rounded-md bg-[#211d1c]">
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Hovězí sušené maso</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Vepřové sušené maso</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Krůtí sušené maso</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Kuřecí sušené maso</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Dárkové balíčky</a
+            >
+
+            <a
+              href="#"
+              class="my-1 block bg-[#2d2827] px-4 py-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#fff3df] shadow-[0_8px_18px_rgba(0,0,0,0.18)] hover:bg-[rgba(0,0,0,0.2)]"
+            >
+              Velikonoční nabídka
+            </a>
+
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Masové paštiky</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Masové zavařeniny</a
+            >
+          </div>
+        </details>
+      </div>
+    </nav>
+
+    <main class="wrap py-[34px] md:px-8 lg:px-0">
+      <div class="mb-10 text-[#6f5a4d]">
+        <a
+          href="/"
+          class="relative inline-block pb-[2px] after:ml-2 after:opacity-[0.42] after:content-['/']"
+          >Domů</a
+        >
+        <a
+          href="/kosik"
+          class="relative inline-block pb-[2px] after:ml-2 after:opacity-[0.42] after:content-['/']"
+          >Košík</a
+        >
+        <span>Objednávka</span>
+      </div>
+
+      <div
+        class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+      >
+        <div>
+          <p
+            class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(35,25,21,0.08)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#231915]"
+          >
+            Objednávka
+          </p>
+          <h1
+            class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(38px,5vw,64px)] leading-[0.95] text-[#231915]"
+          >
+            Dokončení objednávky
+          </h1>
+        </div>
+      </div>
+
+      <section
+        class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start"
+      >
+        <div class="space-y-6">
+          <form class="space-y-6">
+            <article
+              class="overflow-visible border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.92))] shadow-[0_16px_40px_rgba(45,25,15,0.06)]"
+            >
+              <div class="px-6 py-5">
+                <h2
+                  class="flex items-center gap-3 text-[24px] font-semibold text-[#231915]"
+                >
+                  <span
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(35,25,21,0.06)] text-[#231915]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      class="h-5 w-5"
+                      aria-hidden="true"
+                    >
+                      <path d="M20 21a8 8 0 0 0-16 0"></path>
+                      <circle cx="12" cy="8" r="4"></circle>
+                    </svg>
+                  </span>
+                  <span>Osobní údaje</span>
+                </h2>
+              </div>
+
+              <div class="space-y-5 p-6">
+                <div>
+                  <label
+                    for="full-name"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Jméno a příjmení
+                  </label>
+                  <input
+                    id="full-name"
+                    name="full-name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Jan Novák"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="email"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    E-mail
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="jan@novak.cz"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="phone"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Telefon
+                  </label>
+                  <div
+                    class="grid max-w-[440px] grid-cols-[116px_minmax(0,1fr)] gap-3"
+                  >
+                    <details class="group relative">
+                      <summary
+                        class="flex h-12 cursor-pointer list-none items-center gap-2 border border-[rgba(60,37,23,0.14)] bg-white px-3 text-sm text-[#231915] focus:outline-none [&::-webkit-details-marker]:hidden"
+                      >
+                        <span id="phone-code-label">+420</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="ml-auto h-4 w-4 shrink-0 text-[#6f5a4d] transition-transform duration-200 group-open:rotate-180"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </summary>
+                      <input
+                        id="phone-code"
+                        name="phone-code"
+                        type="hidden"
+                        value="+420"
+                      />
+
+                      <div
+                        class="absolute left-0 top-full z-20 mt-2 w-[260px] overflow-hidden border border-[rgba(60,37,23,0.08)] bg-white shadow-[0_16px_40px_rgba(45,25,15,0.12)]"
+                      >
+                        <button
+                          type="button"
+                          data-phone-code-value="+420"
+                          data-phone-code-label="+420"
+                          class="phone-code-option flex w-full items-center justify-between px-4 py-3 text-left text-sm text-[#231915] transition hover:bg-[#f8f5f2]"
+                        >
+                          <span>+420 (Česká republika)</span>
+                        </button>
+                        <button
+                          type="button"
+                          data-phone-code-value="+421"
+                          data-phone-code-label="+421"
+                          class="phone-code-option flex w-full items-center justify-between px-4 py-3 text-left text-sm text-[#231915] transition hover:bg-[#f8f5f2]"
+                        >
+                          <span>+421 (Slovensko)</span>
+                        </button>
+                        <button
+                          type="button"
+                          data-phone-code-value="+49"
+                          data-phone-code-label="+49"
+                          class="phone-code-option flex w-full items-center justify-between px-4 py-3 text-left text-sm text-[#231915] transition hover:bg-[#f8f5f2]"
+                        >
+                          <span>+49 (Německo)</span>
+                        </button>
+                        <button
+                          type="button"
+                          data-phone-code-value="+48"
+                          data-phone-code-label="+48"
+                          class="phone-code-option flex w-full items-center justify-between px-4 py-3 text-left text-sm text-[#231915] transition hover:bg-[#f8f5f2]"
+                        >
+                          <span>+48 (Polsko)</span>
+                        </button>
+                      </div>
+                    </details>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel-national"
+                      placeholder="777 123 456"
+                      class="h-12 w-full border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                    />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.92))] shadow-[0_16px_40px_rgba(45,25,15,0.06)]"
+            >
+              <div class="px-6 py-5">
+                <h2
+                  class="flex items-center gap-3 text-[24px] font-semibold text-[#231915]"
+                >
+                  <span
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(35,25,21,0.06)] text-[#231915]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-5 w-5"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"
+                      />
+                      <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                  </span>
+                  <span>Fakturační adresa</span>
+                </h2>
+              </div>
+
+              <div class="space-y-5 p-6">
+                <div>
+                  <label
+                    for="billing-street"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Ulice
+                  </label>
+                  <input
+                    id="billing-street"
+                    name="billing-street"
+                    type="text"
+                    autocomplete="address-line1"
+                    placeholder="Dlouhá"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="billing-house-number"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Číslo domu
+                  </label>
+                  <input
+                    id="billing-house-number"
+                    name="billing-house-number"
+                    type="text"
+                    autocomplete="address-line2"
+                    placeholder="125"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="billing-city"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Město
+                  </label>
+                  <input
+                    id="billing-city"
+                    name="billing-city"
+                    type="text"
+                    autocomplete="address-level2"
+                    placeholder="Praha"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="billing-district"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Okres
+                  </label>
+                  <input
+                    id="billing-district"
+                    name="billing-district"
+                    type="text"
+                    placeholder="Praha"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="billing-zip"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    PSČ
+                  </label>
+                  <input
+                    id="billing-zip"
+                    name="billing-zip"
+                    type="text"
+                    autocomplete="postal-code"
+                    placeholder="110 00"
+                    class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="billing-country"
+                    class="mb-2 block text-sm font-medium text-[#231915]"
+                  >
+                    Země
+                  </label>
+                  <input
+                    id="billing-country"
+                    name="billing-country"
+                    type="text"
+                    placeholder="Česká republika"
+                    disabled
+                    aria-disabled="true"
+                    class="h-12 w-full max-w-[440px] cursor-not-allowed border border-[rgba(60,37,23,0.1)] bg-[#f6f1ea] px-4 text-sm text-transparent placeholder:text-[#6f5a4d] placeholder:opacity-100 focus:outline-none disabled:text-transparent disabled:placeholder:text-[#6f5a4d]"
+                  />
+                  <p class="mt-2 text-xs leading-[1.6] text-[#8a6f5d]">
+                    Doručujeme pouze v rámci České republiky.
+                  </p>
+                </div>
+
+                <label
+                  for="different-delivery-address"
+                  class="flex max-w-[520px] cursor-pointer items-start gap-3 border border-[rgba(60,37,23,0.08)] bg-[#fcfaf7] px-4 py-4 transition hover:bg-[rgba(35,25,21,0.02)]"
+                >
+                  <input
+                    id="different-delivery-address"
+                    type="checkbox"
+                    name="different-delivery-address"
+                    class="mt-1 h-4 w-4 shrink-0 accent-[#231915]"
+                  />
+                  <div>
+                    <div class="text-sm font-semibold text-[#231915]">
+                      Chci zadat jinou doručovací adresu
+                    </div>
+                    <p class="mt-1 text-sm leading-[1.7] text-[#6b5d53]">
+                      Pokud nezaškrtnete, použije se stejná adresa jako
+                      fakturační.
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </article>
+
+            <article
+              id="delivery-address-box"
+              class="hidden overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.92))] shadow-[0_16px_40px_rgba(45,25,15,0.06)]"
+            >
+              <div class="px-6 py-5">
+                <h2
+                  class="flex items-center gap-3 text-[24px] font-semibold text-[#231915]"
+                >
+                  <span
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(35,25,21,0.06)] text-[#231915]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-5 w-5"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"
+                      />
+                      <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                  </span>
+                  <span>Dodací adresa</span>
+                </h2>
+              </div>
+
+              <div class="space-y-5 p-6">
+                <p class="max-w-[52ch] text-sm leading-[1.7] text-[#6b5d53]">
+                  Vyplňte pouze pokud chcete doručit objednávku na jinou adresu
+                  než fakturační.
+                </p>
+
+                <div class="space-y-5">
+                  <div>
+                    <label
+                      for="delivery-street"
+                      class="mb-2 block text-sm font-medium text-[#231915]"
+                    >
+                      Ulice
+                    </label>
+                    <input
+                      id="delivery-street"
+                      name="delivery-street"
+                      type="text"
+                      autocomplete="shipping address-line1"
+                      placeholder="Dlouhá"
+                      class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="delivery-house-number"
+                      class="mb-2 block text-sm font-medium text-[#231915]"
+                    >
+                      Číslo domu
+                    </label>
+                    <input
+                      id="delivery-house-number"
+                      name="delivery-house-number"
+                      type="text"
+                      autocomplete="shipping address-line2"
+                      placeholder="125"
+                      class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="delivery-city"
+                      class="mb-2 block text-sm font-medium text-[#231915]"
+                    >
+                      Město
+                    </label>
+                    <input
+                      id="delivery-city"
+                      name="delivery-city"
+                      type="text"
+                      autocomplete="shipping address-level2"
+                      placeholder="Praha"
+                      class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="delivery-district"
+                      class="mb-2 block text-sm font-medium text-[#231915]"
+                    >
+                      Okres
+                    </label>
+                    <input
+                      id="delivery-district"
+                      name="delivery-district"
+                      type="text"
+                      placeholder="Praha"
+                      class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="delivery-zip"
+                      class="mb-2 block text-sm font-medium text-[#231915]"
+                    >
+                      PSČ
+                    </label>
+                    <input
+                      id="delivery-zip"
+                      name="delivery-zip"
+                      type="text"
+                      autocomplete="shipping postal-code"
+                      placeholder="110 00"
+                      class="h-12 w-full max-w-[440px] border border-[rgba(60,37,23,0.14)] bg-white px-4 text-sm text-[#231915] placeholder:text-[#9a887c] focus:border-[#b6402c] focus:outline-none"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="delivery-country"
+                      class="mb-2 block text-sm font-medium text-[#231915]"
+                    >
+                      Země
+                    </label>
+                    <input
+                      id="delivery-country"
+                      name="delivery-country"
+                      type="text"
+                      placeholder="Česká republika"
+                      disabled
+                      aria-disabled="true"
+                      class="h-12 w-full max-w-[440px] cursor-not-allowed border border-[rgba(60,37,23,0.1)] bg-[#f6f1ea] px-4 text-sm text-transparent placeholder:text-[#6f5a4d] placeholder:opacity-100 focus:outline-none disabled:text-transparent disabled:placeholder:text-[#6f5a4d]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </article>
+          </form>
+        </div>
+
+        <aside class="lg:sticky lg:top-8">
+          <div
+            class="overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[#211d1c] text-[#fff8f1] shadow-[0_20px_46px_rgba(25,14,10,0.24)]"
+          >
+            <div class="border-b border-white/10 px-6 py-5">
+              <h2 class="flex items-center gap-3 text-[24px] font-semibold">
+                <span
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[#fff8f1]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    class="h-5 w-5"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7"
+                    ></path>
+                    <circle cx="10" cy="19" r="1.5"></circle>
+                    <circle cx="17" cy="19" r="1.5"></circle>
+                  </svg>
+                </span>
+                <span>Souhrn objednávky</span>
+              </h2>
+            </div>
+
+            <div class="space-y-4 px-6 py-6 text-sm">
+              <div class="space-y-3 border-b border-white/10 pb-4">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="font-medium text-white">
+                      Krůtí sušené maso - solené (50g)
+                    </div>
+                    <div class="mt-1 text-xs text-stone-400">1 ks</div>
+                  </div>
+                  <div class="shrink-0 font-medium text-white">170 Kč</div>
+                </div>
+
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="font-medium text-white">
+                      Hovězí sušené maso - chilli (50g)
+                    </div>
+                    <div class="mt-1 text-xs text-stone-400">1 ks</div>
+                  </div>
+                  <div class="shrink-0 font-medium text-white">170 Kč</div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-stone-300">Mezisoučet</span>
+                <span class="font-medium text-white">340 Kč</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-stone-300">Doprava</span>
+                <span class="font-medium text-white">79 Kč</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-stone-300">Platba</span>
+                <span
+                  class="inline-flex items-center rounded-full bg-[#fff8f1] px-3 py-1 text-xs font-bold uppercase tracking-[0.08em] text-[#b6402c]"
+                  >Zdarma</span
+                >
+              </div>
+
+              <div class="h-px bg-white/10"></div>
+
+              <div class="flex items-end justify-between gap-4">
+                <span class="text-base font-medium text-white">Celkem</span>
+                <span
+                  class="font-['Roboto_Slab',Georgia,serif] text-[34px] font-bold leading-none text-white"
+                  >419 Kč</span
+                >
+              </div>
+
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-stone-300">Cena bez DPH</span>
+                <span class="text-white font-medium">379 Kč</span>
+              </div>
+
+              <p class="text-xs leading-[1.7] text-stone-400">
+                Odesláním objednávky souhlasíte s
+                <a
+                  href="/"
+                  class="text-[#fff8f1] underline underline-offset-2 hover:opacity-80"
+                  >obchodními podmínkami</a
+                >
+                a
+                <a
+                  href="/"
+                  class="text-[#fff8f1] underline underline-offset-2 hover:opacity-80"
+                  >podmínkami ochrany osobních údajů</a
+                >.
+              </p>
+
+              <button
+                type="button"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#b6402c] px-5 py-3.5 text-sm font-medium text-white transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#fff8f1]/30"
+              >
+                Objednat s povinností platby
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="mt-20 bg-[#211d1c] text-[#fff8f1]">
+      <div
+        class="wrap grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4 md:px-8 lg:px-0"
+      >
+        <div>
+          <img
+            class="mb-6 w-[180px]"
+            src="./assets/logo.svg"
+            alt="Logo TMT maso"
+          />
+        </div>
+
+        <div>
+          <h4
+            class="mb-6 block font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.15]"
+          >
+            Informace
+          </h4>
+
+          <a class="my-2 block hover:opacity-80" href="/" aria-label="O nás"
+            >O nás</a
+          >
+          <a
+            class="my-2 block hover:opacity-80"
+            href="/"
+            aria-label="Doprava a platba"
+            >Doprava a platba</a
+          >
+          <a
+            class="my-2 block hover:opacity-80"
+            href="/"
+            aria-label="Obchodní podmínky"
+            >Obchodní podmínky</a
+          >
+          <a class="my-2 block hover:opacity-80" href="/" aria-label="Reklamace"
+            >Reklamace</a
+          >
+        </div>
+
+        <div>
+          <h4
+            class="mb-6 block font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.15]"
+          >
+            Spojme se
+          </h4>
+          Instagram / FB widget?
+        </div>
+
+        <div>
+          <h4
+            class="mb-6 block font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.15]"
+          >
+            Kontakt
+          </h4>
+
+          <div class="space-y-3">
+            <a
+              class="group flex items-center gap-3 hover:opacity-80"
+              href="mailto:info@masotmt.cz"
+              aria-label="E-mail"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#fff8f1] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 6h16v12H4z" />
+                  <path d="M4 8l8 6 8-6" />
+                </svg>
+              </span>
+              <span>info@masotmt.cz</span>
+            </a>
+
+            <a
+              class="group flex items-center gap-3 hover:opacity-80"
+              href="tel:+420xxxxxxxxx"
+              aria-label="Zavolat na +420xxxxxxxxx"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#fff8f1] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.62a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.46-1.29a2 2 0 0 1 2.11-.45c.84.3 1.72.51 2.62.63A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </span>
+              <span>+420 xxx xxx xxx</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("details").forEach((dropdown) => {
+          const hiddenInput = dropdown.querySelector("#phone-code");
+          const label = dropdown.querySelector("#phone-code-label");
+          const options = dropdown.querySelectorAll(".phone-code-option");
+
+          if (!hiddenInput || !label || !options.length) return;
+
+          options.forEach((option) => {
+            option.addEventListener("click", () => {
+              hiddenInput.value = option.dataset.phoneCodeValue || "";
+              label.textContent =
+                option.dataset.phoneCodeLabel || hiddenInput.value;
+              dropdown.removeAttribute("open");
+            });
+          });
+        });
+
+        const differentDeliveryCheckbox = document.getElementById(
+          "different-delivery-address",
+        );
+        const deliveryAddressBox = document.getElementById(
+          "delivery-address-box",
+        );
+
+        if (differentDeliveryCheckbox && deliveryAddressBox) {
+          const syncDeliveryVisibility = () => {
+            const isChecked = differentDeliveryCheckbox.checked;
+
+            differentDeliveryCheckbox.setAttribute(
+              "aria-expanded",
+              isChecked ? "true" : "false",
+            );
+            deliveryAddressBox.classList.toggle("hidden", !isChecked);
+            deliveryAddressBox.hidden = !isChecked;
+          };
+
+          syncDeliveryVisibility();
+          differentDeliveryCheckbox.addEventListener(
+            "change",
+            syncDeliveryVisibility,
+          );
+        }
+
+        const navList = document.getElementById("desktop-nav-list");
+        const moreWrap = document.getElementById("desktop-nav-more");
+        const overflowList = document.getElementById(
+          "desktop-nav-overflow-list",
+        );
+
+        if (!navList || !moreWrap || !overflowList) return;
+
+        const originalItems = Array.from(
+          navList.querySelectorAll("[data-nav-item]"),
+        );
+        const navContainer = navList.parentElement;
+
+        const createOverflowLink = (item) => {
+          const sourceLink = item.querySelector("a");
+          if (!sourceLink) return null;
+
+          const link = document.createElement("a");
+          link.href = sourceLink.getAttribute("href") || "#";
+          link.innerHTML = sourceLink.innerHTML;
+          link.className =
+            "block rounded-[12px] px-4 py-3 text-[14px] font-medium tracking-normal text-[#231915] transition hover:bg-[rgba(35,23,20,0.05)]";
+
+          return link;
+        };
+
+        const getOverflowCandidate = () => {
+          const visibleItems = Array.from(navList.children);
+
+          return (
+            [...visibleItems]
+              .reverse()
+              .find((item) => !item.hasAttribute("data-keep-visible")) || null
+          );
+        };
+
+        const getGapWidth = () => {
+          const styles = window.getComputedStyle(navList);
+          return parseFloat(styles.columnGap || styles.gap || "0") || 0;
+        };
+
+        const getItemWidth = (item) => item.getBoundingClientRect().width;
+
+        const getVisibleItemsWidth = () => {
+          const items = Array.from(navList.children);
+          if (items.length === 0) return 0;
+
+          const gap = getGapWidth();
+          const itemsWidth = items.reduce(
+            (sum, item) => sum + getItemWidth(item),
+            0,
+          );
+          const gapsWidth = gap * Math.max(items.length - 1, 0);
+
+          return itemsWidth + gapsWidth;
+        };
+
+        const getMoreReservedWidth = () => {
+          moreWrap.classList.remove("hidden");
+          const styles = window.getComputedStyle(moreWrap);
+          const marginLeft = parseFloat(styles.marginLeft) || 0;
+          const width = moreWrap.getBoundingClientRect().width + marginLeft;
+          moreWrap.classList.add("hidden");
+          return width;
+        };
+
+        const rebalanceNav = () => {
+          originalItems.forEach((item) => navList.appendChild(item));
+          overflowList.innerHTML = "";
+          moreWrap.classList.add("hidden");
+
+          if (window.innerWidth < 768 || !navContainer) return;
+
+          const movedItems = [];
+          const availableWidth = navContainer.getBoundingClientRect().width;
+          const moreReservedWidth = getMoreReservedWidth();
+
+          while (navList.children.length > 0) {
+            const visibleWidth = getVisibleItemsWidth();
+            const reservedWidth = movedItems.length > 0 ? moreReservedWidth : 0;
+            const totalNeeded = visibleWidth + reservedWidth;
+
+            if (totalNeeded <= availableWidth + 1) break;
+
+            const candidate = getOverflowCandidate();
+            if (!candidate) break;
+
+            movedItems.unshift(candidate);
+            candidate.remove();
+          }
+
+          if (movedItems.length > 0) {
+            moreWrap.classList.remove("hidden");
+
+            movedItems.forEach((item) => {
+              const link = createOverflowLink(item);
+              if (link) overflowList.appendChild(link);
+            });
+          }
+        };
+
+        let rafId = null;
+        const requestRebalance = () => {
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(() => {
+            rebalanceNav();
+            rafId = null;
+          });
+        };
+
+        requestRebalance();
+        window.addEventListener("resize", requestRebalance);
+        window.addEventListener("load", requestRebalance);
+
+        if ("ResizeObserver" in window && navContainer) {
+          const observer = new ResizeObserver(requestRebalance);
+          observer.observe(navContainer);
+        }
+      });
+    </script>
+  </body>
+</html>
