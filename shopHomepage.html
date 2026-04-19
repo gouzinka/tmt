@@ -26,83 +26,83 @@
   </head>
 
   <body
-    class="overflow-x-hidden color-[#221814] bg-[radial-gradient(circle_at_8%_7%,rgba(255,255,255,0.78),transparent_18%),radial-gradient(circle_at_90%_14%,rgba(181,58,45,0.08),transparent_20%),linear-gradient(180deg,#fcf8f2_0%,#f7efe4_100%)]"
+    class="overflow-x-hidden pb-[96px] text-[#221814] md:pb-0 bg-[radial-gradient(circle_at_8%_7%,rgba(255,255,255,0.78),transparent_18%),radial-gradient(circle_at_90%_14%,rgba(181,58,45,0.08),transparent_20%),linear-gradient(180deg,#fcf8f2_0%,#f7efe4_100%)]"
   >
     <div
-      class="bg-[#fffcf88f] text-[#6f5a4d] text-center text-[12px] tracking-[0.08em] uppercase px-3 py-[10px] border-b border-[#3b241714]"
+      class="border-b border-[#2d2827] bg-[linear-gradient(135deg,#b6402c,#8f2f21)] px-3 py-[10px] text-center text-[12px] uppercase tracking-[0.08em] text-[#fff8f1]"
     >
       <div class="wrap">Doprava zdarma při objednávce nad 1200 Kč!</div>
     </div>
 
-    <div class="wrap">
-      <!-- Header -->
-      <header
-        class="md:py-6 flex flex-col items-center md:flex-row md:justify-between md:items-center"
-      >
-        <!-- Page Logo -->
-        <a href="/" aria-label="TMT Maso">
-          <img
-            class="mb-10 md:mb-0 w-[120px] md:w-[140px]"
-            width="70"
-            height="70"
-            src="./assets/logo_old.png"
-            alt="Logo TMT maso"
-          />
-        </a>
-
-        <!-- Search Bar -->
-        <form
-          class="md:w-full md:max-w-[380px] lg:max-w-[560px] w-[calc(100%+48px)] p-[24px] md:p-0 bg-[#f8f1e9] md:bg-transparent"
-          role="search"
+    <div class="bg-[#211d1c]">
+      <div class="wrap">
+        <!-- Header -->
+        <header
+          class="flex flex-col items-center md:flex-row md:items-center md:justify-between md:py-6"
         >
-          <label for="site-search" class="sr-only">Hledat na webu</label>
-
-          <div
-            class="flex items-center gap-2 rounded-2xl bg-[#f8f5f2] p-1.5 ring-1 ring-stone-200"
-          >
-            <input
-              type="search"
-              placeholder="Napište, co hledáte"
-              class="h-11 w-full bg-transparent px-4 text-sm text-stone-800 placeholder:text-stone-400 focus:outline-none"
+          <!-- Page Logo -->
+          <a href="/" aria-label="TMT Maso">
+            <img
+              class="mb-10 w-[180px] md:mb-0 md:w-[220px] [filter:drop-shadow(0_8px_18px_rgba(0,0,0,0.18))]"
+              src="./assets/logo.svg"
+              alt="Logo TMT maso"
             />
+          </a>
 
-            <button
-              type="submit"
-              class="cursor-pointer flex h-11 items-center justify-center rounded-xl bg-[#231714] px-5 text-white transition hover:bg-[#3b2d29] focus:outline-none focus:ring-2 focus:ring-[#231714]/30"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                class="h-5 w-5"
-              >
-                <circle cx="11" cy="11" r="7"></circle>
-                <path d="M20 20l-3.5-3.5"></path>
-              </svg>
-            </button>
-          </div>
-        </form>
+          <!-- Search Bar -->
+          <form
+            class="w-[calc(100%+48px)] px-[24px] pb-[24px] md:w-full md:max-w-[380px] md:px-0 md:pb-0 lg:max-w-[560px]"
+            role="search"
+          >
+            <label for="site-search" class="sr-only">Hledat na webu</label>
 
-        <!-- Cart component - Non-empty state -->
-        <div class="relative group order-first md:order-none ml-auto md:ml-0">
-          <a href="/kosik">
-            <button
-              type="button"
-              class="flex items-center gap-3 py-2.5 focus:outline-none cursor-pointer"
-              aria-label="Košík"
+            <div
+              class="flex items-center gap-2 rounded-full border border-[rgba(0,0,0,0.2)] bg-white/5 p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm"
             >
-              <div
-                class="relative flex h-10 w-10 md:h-10 md:w-10 items-center justify-center"
+              <input
+                id="site-search"
+                name="q"
+                type="search"
+                placeholder="Napište, co hledáte"
+                class="h-11 w-full bg-transparent px-4 text-sm text-[#fff8f1] placeholder:text-[#b8aaa0] [color-scheme:dark] focus:outline-none"
+              />
+
+              <button
+                type="submit"
+                class="flex h-11 cursor-pointer items-center justify-center rounded-full bg-[linear-gradient(135deg,rgba(0,0,0,0.2),#231915)] px-5 text-[#fff8f1] transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#b6402c]/40"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
+                  stroke-width="2"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M20 20l-3.5-3.5"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <!-- Cart component - Non-empty state -->
+          <div class="relative order-first ml-auto group md:order-none md:ml-0">
+            <a
+              href="/kosik"
+              class="flex cursor-pointer items-center gap-3 py-2.5 focus:outline-none"
+              aria-label="Košík"
+            >
+              <div class="relative flex h-10 w-10 items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff8f1"
                   stroke-width="1.8"
-                  class="h-10 w-10 md:h-5 md:w-5 text-[#231714]"
+                  class="h-5 w-5 text-[#fff8f1]"
+                  aria-hidden="true"
                 >
                   <path
                     d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7"
@@ -112,116 +112,203 @@
                 </svg>
 
                 <span
-                  class="absolute -right-0.5 -top-0.5 inline-flex min-h-[20px] min-w-[20px] items-center justify-center rounded-full bg-[#231714] px-1.5 text-[11px] font-semibold leading-none text-white"
+                  class="absolute -right-0.5 -top-0.5 inline-flex min-h-[20px] min-w-[20px] items-center justify-center rounded-full bg-[#fff8f1] px-1.5 text-[11px] font-semibold leading-[20px] text-[#211d1c]"
                 >
                   2
                 </span>
               </div>
 
-              <div class="hidden md:inline-block text-left leading-tight">
-                <div class="text-xs uppercase tracking-[0.08em] text-stone-500">
+              <div class="hidden text-left leading-tight md:inline-block">
+                <div class="text-xs uppercase tracking-[0.08em] text-stone-300">
                   Košík
                 </div>
-                <div class="text-sm font-medium text-stone-800">340 Kč</div>
+                <div class="text-sm font-medium text-stone-400">340 Kč</div>
               </div>
-            </button>
-          </a>
+            </a>
 
-          <div
-            class="invisible absolute right-0 top-full z-50 pt-3 opacity-0 transition duration-200 sm:group-hover:visible group-hover:opacity-100 sm:group-focus-within:visible sm:group-focus-within:opacity-100"
-          >
             <div
-              class="w-[360px] translate-y-2 rounded-2xl bg-white p-4 shadow-[0_18px_40px_rgba(0,0,0,0.14)] ring-1 ring-stone-200 transition duration-200 group-hover:translate-y-0 group-focus-within:translate-y-0"
+              class="invisible absolute right-0 top-full z-50 pt-3 opacity-0 transition duration-200 sm:group-hover:visible sm:group-focus-within:visible group-hover:opacity-100 sm:group-focus-within:opacity-100"
             >
-              <div class="mb-3 flex items-center justify-between">
-                <h3 class="text-sm font-semibold text-stone-900">Váš košík</h3>
-                <span class="text-xs text-stone-500">2 položky</span>
-              </div>
-
-              <div class="space-y-3">
-                <div class="flex gap-3 bg-[#f8f5f2] p-2.5">
-                  <img
-                    src="./assets/medChilliTurkeyHQ.png"
-                    alt="Krůtí sušené maso"
-                    class="h-auto w-12 object-contain"
-                  />
-                  <div class="min-w-0 flex-1">
-                    <div class="truncate text-sm font-medium text-stone-900">
-                      Krůtí sušené maso - solené
-                    </div>
-                    <div class="mt-0.5 text-xs text-stone-500">
-                      1 ks · 170 Kč
-                    </div>
-                  </div>
-                </div>
-
-                <div class="flex gap-3 bg-[#f8f5f2] p-2.5">
-                  <img
-                    src="./assets/medChilliTurkeyHQ.png"
-                    alt="Hovězí sušené maso"
-                    class="h-auto w-12 object-contain"
-                  />
-                  <div class="min-w-0 flex-1">
-                    <div class="truncate text-sm font-medium text-stone-900">
-                      Hovězí sušené maso - chilli
-                    </div>
-                    <div class="mt-0.5 text-xs text-stone-500">
-                      1 ks · 170 Kč
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="my-4 h-px bg-stone-200"></div>
-
-              <div class="mb-4 flex items-center justify-between">
-                <span class="text-sm text-stone-500">Celkem</span>
-                <span class="text-lg font-semibold text-stone-900">340 Kč</span>
-              </div>
-
-              <a
-                href="/kosik"
-                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#231714] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#3b2d29] focus:outline-none focus:ring-2 focus:ring-[#231714]/30"
+              <div
+                class="w-[360px] translate-y-2 rounded-2xl bg-white p-4 shadow-[0_18px_40px_rgba(0,0,0,0.14)] ring-1 ring-stone-200 transition duration-200 group-hover:translate-y-0 group-focus-within:translate-y-0"
               >
-                Pokračovat do košíku
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="h-4 w-4"
+                <div class="mb-3 flex items-center justify-between">
+                  <h3 class="text-sm font-semibold text-stone-900">
+                    Váš košík
+                  </h3>
+                  <span class="text-xs text-stone-500">2 položky</span>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="flex gap-3 bg-[#f8f5f2] p-2.5">
+                    <img
+                      src="./assets/medChilliTurkeyHQ.png"
+                      alt="Krůtí sušené maso"
+                      class="h-auto w-12 object-cover"
+                    />
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-sm font-medium text-stone-900">
+                        Krůtí sušené maso - solené
+                      </div>
+                      <div class="mt-0.5 text-xs text-stone-500">
+                        1 ks · 170 Kč
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-3 bg-[#f8f5f2] p-2.5">
+                    <img
+                      src="./assets/medChilliTurkeyHQ.png"
+                      alt="Hovězí sušené maso"
+                      class="h-auto w-12 object-cover"
+                    />
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-sm font-medium text-stone-900">
+                        Hovězí sušené maso - chilli
+                      </div>
+                      <div class="mt-0.5 text-xs text-stone-500">
+                        1 ks · 170 Kč
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="my-4 h-px bg-stone-200"></div>
+
+                <div class="mb-4 flex items-center justify-between">
+                  <span class="text-sm text-stone-500">Celkem</span>
+                  <span class="text-lg font-semibold text-stone-900"
+                    >340 Kč</span
+                  >
+                </div>
+
+                <a
+                  href="/kosik"
+                  class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#211d1c] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#3b2d29] focus:outline-none focus:ring-2 focus:ring-[#211d1c]/30"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
+                  Pokračovat do košíku
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-4 w-4"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
     </div>
 
     <!-- Main Nav -->
-    <nav class="bg-[#231714] text-[#fff8f1]">
+    <nav
+      class="bg-[#211d1c] text-[#fff8f1] border-t border-[#2d2827]"
+      aria-label="Hlavní navigace"
+    >
       <div class="wrap py-[10px]">
         <!-- Desktop -->
-        <ul
-          class="hidden md:flex items-center gap-8 text-center text-[12px] font-bold uppercase tracking-[0.08em]"
-        >
-          <li><a href="" class="hover:opacity-80">Hovězí sušené maso</a></li>
-          <li><a href="" class="hover:opacity-80">Vepřové sušené maso</a></li>
-          <li><a href="" class="hover:opacity-80">Krůtí sušené maso</a></li>
-          <li><a href="" class="hover:opacity-80">Kuřecí sušené maso</a></li>
-          <li><a href="" class="hover:opacity-80">Dárkové balíčky</a></li>
-          <li><a href="" class="hover:opacity-80">Ostatní</a></li>
-        </ul>
+        <div class="hidden items-center md:flex">
+          <ul
+            id="desktop-nav-list"
+            class="flex min-w-0 flex-1 flex-nowrap items-center gap-6 overflow-hidden text-center text-[12px] font-bold uppercase tracking-[0.08em] lg:gap-8"
+          >
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Hovězí sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Vepřové sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Krůtí sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Kuřecí sušené maso
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Dárkové balíčky
+              </a>
+            </li>
+
+            <li data-nav-item data-keep-visible="true" class="shrink-0">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 whitespace-nowrap bg-[#2d2827] px-3 py-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#fff3df] transition duration-200 hover:bg-[rgba(0,0,0,0.2)] hover:text-white shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+              >
+                Velikonoční nabídka
+              </a>
+            </li>
+
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Masové paštiky
+              </a>
+            </li>
+            <li data-nav-item class="shrink-0">
+              <a href="#" class="whitespace-nowrap hover:opacity-80">
+                Masové zavařeniny
+              </a>
+            </li>
+          </ul>
+
+          <div
+            id="desktop-nav-more"
+            class="group relative ml-6 hidden shrink-0"
+          >
+            <button
+              type="button"
+              class="inline-flex items-center gap-1 py-2 text-[12px] font-bold uppercase tracking-[0.08em] hover:opacity-80 focus:outline-none"
+              aria-haspopup="true"
+            >
+              Ostatní
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="invisible absolute right-0 top-full z-50 pt-2 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+            >
+              <div
+                class="min-w-[260px] overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.94))] p-2 text-left normal-case shadow-[0_18px_40px_rgba(45,25,15,0.12)] backdrop-blur-sm"
+              >
+                <div id="desktop-nav-overflow-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Mobile -->
-        <details class="relative md:hidden group">
+        <details class="group relative md:hidden">
           <summary
             class="flex cursor-pointer items-center justify-end p-2 [&::-webkit-details-marker]:hidden"
+            aria-label="Otevřít menu"
           >
             <svg
               class="h-6 w-6 transition-transform duration-200 group-open:rotate-90"
@@ -230,6 +317,7 @@
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
+              aria-hidden="true"
             >
               <path d="M4 6h16"></path>
               <path d="M4 12h16"></path>
@@ -237,36 +325,49 @@
             </svg>
           </summary>
 
-          <div class="my-2 overflow-hidden rounded-md bg-[#231714]">
+          <div class="my-2 overflow-hidden rounded-md bg-[#211d1c]">
             <a
-              href=""
+              href="#"
               class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
               >Hovězí sušené maso</a
             >
             <a
-              href=""
+              href="#"
               class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
               >Vepřové sušené maso</a
             >
             <a
-              href=""
+              href="#"
               class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
               >Krůtí sušené maso</a
             >
             <a
-              href=""
+              href="#"
               class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
               >Kuřecí sušené maso</a
             >
             <a
-              href=""
+              href="#"
               class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
               >Dárkové balíčky</a
             >
+
             <a
-              href=""
+              href="#"
+              class="block bg-[#2d2827] px-4 py-3 my-1 text-[12px] font-bold uppercase tracking-[0.08em] text-[#fff3df] hover:bg-[rgba(0,0,0,0.2)] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+            >
+              Velikonoční nabídka
+            </a>
+
+            <a
+              href="#"
               class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
-              >Ostatní</a
+              >Masové paštiky</a
+            >
+            <a
+              href="#"
+              class="block px-4 py-3 text-[12px] uppercase tracking-[0.08em] hover:bg-white/10"
+              >Masové zavařeniny</a
             >
           </div>
         </details>
@@ -274,648 +375,805 @@
     </nav>
 
     <main>
+      <!-- Hero -->
       <div
-        class="bg-[url('./assets/shopHeader.png')] bg-position-[bottom_center] bg-cover bg-no-repeat h-[620px] xl:h-[820px] mb-20"
+        class="relative isolate h-[620px] bg-[url('./assets/headerShop.png')] bg-cover bg-no-repeat [background-position:center_top] xl:h-[790px]"
       >
-        <!-- Hero -->
-        <div class="wrap py-[28px]">
+        <!-- Mobile dark overlay -->
+        <div
+          class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/30 md:hidden"
+          aria-hidden="true"
+        ></div>
+
+        <div class="wrap relative z-10 py-20">
           <section
-            class="relative overflow-hidden pb-[88px] pt-[22px] lg:pt-[34px] lg:grid lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] gap-12 items-center"
+            class="relative overflow-hidden pt-[22px] lg:grid lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center lg:pt-[34px]"
           >
             <div class="relative z-[2] max-w-[620px]">
               <h1
-                class="mb-[28px] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(58px,9vw,112px)] leading-[0.9] font-normal tracking-[0.01em] text-balance text-[#fff8f1]"
+                class="hero-reveal hero-reveal-delay-1 mb-[28px] text-balance font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(58px,7vw,92px)] font-normal leading-[0.9] tracking-[0.01em] text-[#fff8f1]"
               >
-                Maso, které si na nic nehraje
+                Sušíme maso, poctivě a s láskou
               </h1>
 
               <p
-                class="text-[18px] leading-[1.8] text-[#fff8f1] max-w-[34ch] mb-8"
+                class="hero-reveal hero-reveal-delay-2 mb-8 max-w-[42ch] text-[18px] leading-[1.8] text-[#fff8f1]"
               >
-                Ručně vyráběné jerky v malých sériích. Minimum zbytečností,
-                maximum chuti. Když chceš snack, který má charakter.
+                Každý kousek připravujeme ručně a sušíme s maximální pečlivostí.
+                Díky tomu chutná přesně tak, jak má – krutopřísně dobře!
               </p>
 
-              <div class="flex flex-col sm:flex-row gap-4 mb-8">
+              <div
+                class="hero-reveal hero-reveal-delay-3 mb-8 flex flex-col gap-4 sm:flex-row"
+              >
                 <a
-                  href="#produkty"
-                  class="inline-flex items-center justify-center rounded-full h-[52px] min-w-[220px] max-w-[280px] px-[28px] bg-[linear-gradient(135deg,#b6402c,#8f2f21)] text-[#fff7ef] font-extrabold text-[16px] tracking-[0.01em] shadow-[0_8px_16px_rgba(182,64,44,0.22)] transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-105"
+                  href=""
+                  class="inline-flex h-[52px] min-w-[220px] max-w-[280px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#b6402c,#8f2f21)] px-[28px] text-[16px] font-extrabold tracking-[0.01em] text-[#fff7ef] shadow-[0_8px_16px_rgba(182,64,44,0.22)] transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-105"
                 >
                   Projít nabídku
-                </a>
-
-                <a
-                  href="#onas"
-                  class="inline-flex items-center justify-center rounded-full h-[52px] min-w-[220px] max-w-[280px] px-[28px] border border-[rgba(62,40,27,0.14)] bg-[rgba(255,255,255,0.68)] text-[#231915] font-semibold text-[16px] transition duration-200 hover:bg-white"
-                >
-                  Jak vyrábíme
                 </a>
               </div>
             </div>
           </section>
         </div>
       </div>
-      <div class="wrap py-[28px] md:px-8 lg:px-0">
-        <!-- Categories -->
-        <section class="pb-[88px]">
-          <div class="mb-10 text-center">
-            <h2
-              class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(36px,4.8vw,62px)] leading-[1] text-[#231915]"
-            >
-              Vyber si podle chuti
-            </h2>
-            <p
-              class="mt-4 text-[16px] leading-[1.75] text-[#6b5d53] max-w-[52ch] m-auto"
-            >
-              Každý typ masa má jiný charakter. Někdo chce sílu hovězího, někdo
-              lehkost krůtího. Tady si najdeš svoje.
-            </p>
-          </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
-            <a
-              href=""
-              class="group relative overflow-hidden p-6 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-24px] top-[-24px] h-[110px] w-[110px] rounded-full bg-[rgba(182,58,45,0.08)] blur-2xl"
-              ></div>
-              <div
-                class="mb-5 inline-block rounded-full bg-[rgba(182,58,45,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#b63a2d]"
-              >
-                Hovězí
-              </div>
-              <div
-                class="bg-[url('./assets/bull.png')] bg-cover bg-no-repeat bg-position-[center_20%] h-[300px]"
-              ></div>
-              <h3
-                class="mb-3 text-[30px] leading-[1] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
-              >
-                Výrazné a poctivé
-              </h3>
-              <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
-                Čistá chuť masa, pepř, chilli nebo česnek. Klasika, která má
-                sílu.
-              </p>
-              <span
-                class="inline-flex items-center gap-2 text-[15px] text-[#231915] font-semibold"
-              >
-                Projít hovězí
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="h-4 w-4 transition duration-200 group-hover:translate-x-1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </a>
-
-            <a
-              href=""
-              class="group relative overflow-hidden p-6 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-24px] top-[-24px] h-[110px] w-[110px] rounded-full bg-[rgba(185,122,107,0.08)] blur-2xl"
-              ></div>
-              <div
-                class="mb-5 inline-block rounded-full bg-[rgba(185,122,107,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#b97a6b]"
-              >
-                Vepřové
-              </div>
-
-              <div
-                class="bg-[url('./assets/pig.png')] bg-cover bg-no-repeat bg-position-[center_20%] h-[300px]"
-              ></div>
-              <h3
-                class="mb-3 text-[30px] leading-[1] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
-              >
-                Jemnější a kulatější
-              </h3>
-              <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
-                Pro ty, kdo chtějí měkčí profil a chuť, která se dobře vrací.
-              </p>
-              <span
-                class="inline-flex items-center gap-2 text-[15px] text-[#231915] font-semibold"
-              >
-                Projít vepřové
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="h-4 w-4 transition duration-200 group-hover:translate-x-1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </a>
-
-            <a
-              href=""
-              class="group relative overflow-hidden p-6 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-24px] top-[-24px] h-[110px] w-[110px] rounded-full bg-[rgba(53,122,86,0.08)] blur-2xl"
-              ></div>
-              <div
-                class="mb-5 inline-block rounded-full bg-[rgba(53,122,86,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#357a56]"
-              >
-                Krůtí
-              </div>
-
-              <div
-                class="bg-[url('./assets/turkey.png')] bg-cover bg-no-repeat bg-position-[center_20%] h-[300px]"
-              ></div>
-              <h3
-                class="mb-3 text-[30px] leading-[1] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
-              >
-                Lehčí a čisté
-              </h3>
-              <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
-                Ideální, když chceš lehčí snack bez ztráty charakteru.
-              </p>
-              <span
-                class="inline-flex items-center gap-2 text-[15px] text-[#231915] font-semibold"
-              >
-                Projít krůtí
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="h-4 w-4 transition duration-200 group-hover:translate-x-1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </a>
-
-            <a
-              href=""
-              class="group relative overflow-hidden p-6 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-24px] top-[-24px] h-[110px] w-[110px] rounded-full bg-[rgba(146,111,34,0.08)] blur-2xl"
-              ></div>
-              <div
-                class="mb-5 inline-block rounded-full bg-[rgba(146,111,34,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#926f22]"
-              >
-                Kuřecí
-              </div>
-
-              <div
-                class="bg-[url('./assets/chicken.png')] -scale-x-100 bg-cover bg-no-repeat bg-position-[center_20%] h-[300px]"
-              ></div>
-              <h3
-                class="mb-3 text-[30px] leading-[1] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
-              >
-                Přístupné a hravé
-              </h3>
-              <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
-                Sladko-slané i kořeněné varianty pro pohodové mlsání.
-              </p>
-              <span
-                class="inline-flex items-center gap-2 text-[15px] text-[#231915] font-semibold"
-              >
-                Projít kuřecí
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="h-4 w-4 transition duration-200 group-hover:translate-x-1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </a>
-          </div>
-        </section>
-
-        <!-- Bestsellers -->
-        <section class="pb-[96px] md:px-8 lg:px-0">
-          <div class="relative mb-10 flex items-end justify-center">
-            <div class="text-center">
+      <div class="bg-[#f7f4ed]">
+        <div class="wrap py-20 md:px-8 lg:px-0">
+          <!-- Categories -->
+          <section class="reveal">
+            <div class="mb-10 text-center">
               <h2
-                class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(34px,4.6vw,58px)] leading-[1] text-[#231915]"
+                class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(36px,4.8vw,62px)] leading-[1] text-[#231915]"
               >
-                Nejprodávanější kousky
+                Vyber si podle chuti
               </h2>
-              <p class="mt-4 text-[16px] leading-[1.75] text-[#6b5d53]">
-                Když nevíš, kde začít, začni tady. Tohle zákazníci berou
-                nejčastěji.
-              </p>
             </div>
 
-            <a
-              href=""
-              class="absolute right-0 bottom-0 hidden lg:inline-flex items-center gap-2 rounded-full px-4 py-3 text-[15px] text-[#231915] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              Zobrazit vše
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="h-4 w-4"
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+              <a
+                href="#"
+                class="group relative overflow-hidden p-6 text-center flex h-full flex-col"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-            <!-- Card 1 -->
-            <article
-              class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(182,58,45,0.08)] blur-2xl"
-              ></div>
-
-              <a href="" class="block">
                 <div
-                  class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
-                >
-                  <img
-                    src="./assets/medChilliTurkeyHQ.png"
-                    alt="Hovězí jerky chilli"
-                    class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
-                  />
-                </div>
-
-                <div
-                  class="inline-block mb-3 rounded-full bg-[rgba(182,58,45,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#b63a2d]"
+                  class="relative h-[270px] transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.015] bg-[url('./assets/bull.svg')] bg-contain bg-no-repeat [background-position:center_center] [background-position:center_center]"
+                ></div>
+                <h3
+                  class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[38px] leading-[1] text-[#231915]"
                 >
                   Hovězí
-                </div>
-
-                <h3
-                  class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
-                >
-                  Chilli klasik
                 </h3>
-
-                <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
-                  Příjemně pálivá klasika, která pořád nechává vyniknout maso.
+                <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
+                  Čistá chuť masa, která má sílu.
                 </p>
+                <span
+                  class="mt-auto self-center relative inline-block pb-[6px] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-[#231915] after:opacity-55 after:transition-all after:duration-300 after:ease-out group-hover:after:h-[2px] group-hover:after:opacity-100"
+                >
+                  <span
+                    class="inline-block origin-center transform-gpu text-[15px] font-semibold text-[#231915] transition-transform duration-300 ease-out will-change-transform group-hover:-translate-y-[1px] group-hover:scale-[1.01]"
+                  >
+                    Prozkoumat
+                  </span>
+                </span>
               </a>
 
-              <div class="flex items-end justify-between gap-4">
-                <div>
-                  <div
-                    class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
-                  >
-                    od
-                  </div>
-                  <div
-                    class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
-                  >
-                    149 Kč
-                  </div>
-                </div>
-
-                <a
-                  href=""
-                  class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
-                >
-                  Detail
-                </a>
-              </div>
-            </article>
-
-            <!-- Card 2 -->
-            <article
-              class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(53,122,86,0.08)] blur-2xl"
-              ></div>
-
-              <a href="" class="block">
+              <a
+                href="#"
+                class="group relative overflow-hidden p-6 text-center flex h-full flex-col"
+              >
                 <div
-                  class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
+                  class="relative h-[270px] transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.015] bg-[url('./assets/pig.svg')] bg-contain bg-no-repeat [background-position:center_center] [background-position:center_center]"
+                ></div>
+                <h3
+                  class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[38px] leading-[1] text-[#231915]"
                 >
-                  <img
-                    src="./assets/medChilliTurkeyHQ.png"
-                    alt="Krůtí jerky bylinky"
-                    class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
-                  />
-                </div>
+                  Vepřové
+                </h3>
+                <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
+                  Trochu jiná chuť, která tě bude bavit.
+                </p>
+                <span
+                  class="mt-auto self-center relative inline-block pb-[6px] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-[#231915] after:opacity-55 after:transition-all after:duration-300 after:ease-out group-hover:after:h-[2px] group-hover:after:opacity-100"
+                >
+                  <span
+                    class="inline-block origin-center transform-gpu text-[15px] font-semibold text-[#231915] transition-transform duration-300 ease-out will-change-transform group-hover:-translate-y-[1px] group-hover:scale-[1.01]"
+                  >
+                    Prozkoumat
+                  </span>
+                </span>
+              </a>
 
+              <a
+                href="#"
+                class="group relative overflow-hidden p-6 text-center flex h-full flex-col"
+              >
                 <div
-                  class="inline-block mb-3 rounded-full bg-[rgba(53,122,86,0.12)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#357a56]"
+                  class="relative h-[270px] transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.015] bg-[url('./assets/turkey.svg')] bg-contain bg-no-repeat [background-position:center_center] [background-position:center_center]"
+                ></div>
+                <h3
+                  class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[38px] leading-[1] text-[#231915]"
                 >
                   Krůtí
-                </div>
-
-                <h3
-                  class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
-                >
-                  Zelené bylinky
                 </h3>
-
-                <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
-                  Lehčí profil s jemnou bylinkovou linkou a čistým zakončením.
+                <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
+                  Sladko-slané i kořeněné varianty pro pohodové mlsání.
                 </p>
+                <span
+                  class="mt-auto self-center relative inline-block pb-[6px] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-[#231915] after:opacity-55 after:transition-all after:duration-300 after:ease-out group-hover:after:h-[2px] group-hover:after:opacity-100"
+                >
+                  <span
+                    class="inline-block origin-center transform-gpu text-[15px] font-semibold text-[#231915] transition-transform duration-300 ease-out will-change-transform group-hover:-translate-y-[1px] group-hover:scale-[1.01]"
+                  >
+                    Prozkoumat
+                  </span>
+                </span>
               </a>
 
-              <div class="flex items-end justify-between gap-4">
-                <div>
-                  <div
-                    class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
-                  >
-                    od
-                  </div>
-                  <div
-                    class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
-                  >
-                    129 Kč
-                  </div>
-                </div>
-
-                <a
-                  href=""
-                  class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
-                >
-                  Detail
-                </a>
-              </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article
-              class="group relative overflow-hidden p-5 bg-[rgba(255,255,255,0.68)] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)]"
-            >
-              <div
-                class="absolute right-[-28px] top-[-28px] h-[120px] w-[120px] rounded-full bg-[rgba(35,25,21,0.06)] blur-2xl"
-              ></div>
-
-              <a href="" class="block">
+              <a
+                href="#"
+                class="group relative overflow-hidden p-6 text-center flex h-full flex-col"
+              >
                 <div
-                  class="relative mb-5 flex h-[250px] items-center justify-center overflow-hidden bg-[rgba(255,255,255,0.65)]"
-                >
-                  <img
-                    src="./assets/medChilliTurkeyHQ.png"
-                    alt="Dárkový balíček"
-                    class="max-h-[210px] w-auto object-contain transition duration-300 group-hover:scale-[1.04] group-hover:-rotate-[2deg]"
-                  />
-                </div>
-
-                <div
-                  class="inline-block mb-3 rounded-full bg-[rgba(35,25,21,0.08)] px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em] text-[#231915]"
-                >
-                  Dárkové balení
-                </div>
-
+                  class="relative h-[270px] transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.015] bg-[url('./assets/chicken.svg')] bg-contain bg-no-repeat [background-position:center_center] [background-position:center_center]"
+                ></div>
                 <h3
-                  class="mb-2 text-[24px] leading-[1.05] text-[#231915] font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif]"
+                  class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[38px] leading-[1] text-[#231915]"
                 >
-                  Startovací box
+                  Kuřecí
                 </h3>
-
-                <p class="mb-5 text-[15px] leading-[1.7] text-[#6b5d53]">
-                  Mix oblíbených příchutí pro ochutnání nebo jako dárek.
+                <p class="mb-6 text-[15px] leading-[1.7] text-[#6b5d53]">
+                  Ideální, když chceš lehčí snack bez ztráty charakteru.
                 </p>
+                <span
+                  class="mt-auto self-center relative inline-block pb-[6px] after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-[#231915] after:opacity-55 after:transition-all after:duration-300 after:ease-out group-hover:after:h-[2px] group-hover:after:opacity-100"
+                >
+                  <span
+                    class="inline-block origin-center transform-gpu text-[15px] font-semibold text-[#231915] transition-transform duration-300 ease-out will-change-transform group-hover:-translate-y-[1px] group-hover:scale-[1.01]"
+                  >
+                    Prozkoumat
+                  </span>
+                </span>
               </a>
-
-              <div class="flex items-end justify-between gap-4">
-                <div>
-                  <div
-                    class="text-[13px] uppercase tracking-[0.08em] text-[#6f5a4d]"
-                  >
-                    od
-                  </div>
-                  <div
-                    class="text-[28px] leading-none text-[#231915] font-['Roboto_Slab',Georgia,serif] font-bold"
-                  >
-                    399 Kč
-                  </div>
-                </div>
-
-                <a
-                  href=""
-                  class="inline-flex items-center justify-center rounded-full bg-[#231714] px-5 py-3 text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
-                >
-                  Detail
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="mt-8 lg:hidden text-right">
-            <a
-              href=""
-              class="inline-flex items-center gap-2 rounded-full border border-[rgba(62,40,27,0.14)] bg-[rgba(255,255,255,0.62)] px-5 py-3 text-[15px] text-[#231915] transition duration-200 hover:bg-white"
-            >
-              Zobrazit vše
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="h-4 w-4"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-          </div>
-        </section>
-
-        <!-- Why us -->
-        <section class="pb-[96px]">
-          <!-- Left column -->
-          <article class="relative overflow-hidden md:p-4 lg:p-0">
-            <h2
-              class="text-center mb-10 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(40px,5.2vw,72px)] leading-[0.95] text-[#231915]"
-            >
-              Náš příběh
-            </h2>
-            <div
-              class="lg:grid lg:grid-cols-1 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] gap-5 lg:gap-12 items-start"
-            >
-              <div
-                class="m-auto mb-15 lg:m-0 text-center lg:text-left max-w-[48ch] lg:ml-auto lg:max-w-[58ch] space-y-5 text-[17px] leading-[1.9] text-[#6b5d53]"
-              >
-                <p>
-                  TMT Maso není anonymní výrobna. Děláme jerky v malých sériích,
-                  hlídáme si chuť, texturu i to, aby maso nebylo schované pod
-                  tunou omáček.
-                </p>
-
-                <p>
-                  Nehoníme efektní názvy ani složité receptury jen proto, aby to
-                  vypadalo zajímavěji. Důležité je pro nás, aby sis otevřel
-                  balení a měl chuť dát si hned další kus.
-                </p>
-
-                <p>
-                  Ať bereš jerky na cesty, do práce, na výlet nebo jen večer k
-                  filmu, chceme, aby to byl snack, který nezklame.
-                </p>
-              </div>
-              <!-- Right column -->
-              <aside class="relative overflow-hidden">
-                <div
-                  class="absolute right-[-36px] top-[-30px] h-[150px] w-[150px] rounded-full bg-[rgba(182,58,45,0.08)] blur-3xl"
-                ></div>
-                <div
-                  class="absolute left-[-24px] bottom-[18%] h-[120px] w-[120px] rounded-full bg-[rgba(53,122,86,0.06)] blur-3xl"
-                ></div>
-
-                <div
-                  class="relative border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(255,250,244,0.72))] p-6 md:p-8 shadow-[0_18px_40px_rgba(45,25,15,0.06)]"
-                >
-                  <div
-                    class="mb-6 text-[13px] uppercase tracking-[0.12em] text-[#8a664f]"
-                  >
-                    Na čem si zakládáme
-                  </div>
-
-                  <div class="space-y-4">
-                    <!-- item -->
-                    <article
-                      class="flex gap-4 bg-white/65 p-4 ring-1 ring-[rgba(60,37,23,0.06)]"
-                    >
-                      <div
-                        class="mt-1 flex h-11 w-11 shrink-0 items-center justify-center bg-[#231714] text-white shadow-[0_8px_18px_rgba(35,23,20,0.16)]"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          class="h-5 w-5"
-                        >
-                          <path
-                            d="M12 3l2.2 4.5L19 8l-3.5 3.4.8 4.8L12 14l-4.3 2.2.8-4.8L5 8l4.8-.5L12 3z"
-                          />
-                        </svg>
-                      </div>
-
-                      <div>
-                        <strong class="block mb-1 text-[18px] text-[#231915]">
-                          Chuť bez zbytečností
-                        </strong>
-                        <p class="text-[16px] leading-[1.75] text-[#6b5d53]">
-                          Žádné zbytečné překombinování. Maso má mluvit první.
-                        </p>
-                      </div>
-                    </article>
-
-                    <!-- item -->
-                    <article
-                      class="flex gap-4 bg-white/65 p-4 ring-1 ring-[rgba(60,37,23,0.06)]"
-                    >
-                      <div
-                        class="mt-1 flex h-11 w-11 shrink-0 items-center justify-center bg-[#231714] text-white shadow-[0_8px_18px_rgba(35,23,20,0.16)]"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          class="h-5 w-5"
-                        >
-                          <path d="M5 6h14" />
-                          <path d="M5 12h14" />
-                          <path d="M5 18h14" />
-                          <path d="M3 6h.01" />
-                          <path d="M3 12h.01" />
-                          <path d="M3 18h.01" />
-                        </svg>
-                      </div>
-
-                      <div>
-                        <strong class="block mb-1 text-[18px] text-[#231915]">
-                          Přehledná nabídka
-                        </strong>
-                        <p class="text-[16px] leading-[1.75] text-[#6b5d53]">
-                          Žádný chaos. Snadno si vybereš podle masa i stylu
-                          chuti.
-                        </p>
-                      </div>
-                    </article>
-
-                    <!-- item -->
-                    <article
-                      class="flex gap-4 bg-white/65 p-4 ring-1 ring-[rgba(60,37,23,0.06)]"
-                    >
-                      <div
-                        class="mt-1 flex h-11 w-11 shrink-0 items-center justify-center bg-[#231714] text-white shadow-[0_8px_18px_rgba(35,23,20,0.16)]"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          class="h-5 w-5"
-                        >
-                          <path
-                            d="M12 21s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.7-7 10-7 10z"
-                          />
-                        </svg>
-                      </div>
-
-                      <div>
-                        <strong class="block mb-1 text-[18px] text-[#231915]">
-                          Dobré i jako dárek
-                        </strong>
-                        <p class="text-[16px] leading-[1.75] text-[#6b5d53]">
-                          Když chceš potěšit někoho, kdo ocení něco slaného a
-                          poctivého.
-                        </p>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </aside>
             </div>
-          </article>
-        </section>
+          </section>
+        </div>
+      </div>
 
+      <div class="bg-[#fffcf7]">
+        <div class="wrap py-20 md:px-8 lg:px-0">
+          <!-- Bestsellers -->
+          <section id="produkty" class="reveal md:px-8 lg:px-0">
+            <div class="relative mb-10 flex items-end justify-center">
+              <div class="text-center">
+                <h2
+                  class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(34px,4.6vw,58px)] leading-[1] text-[#231915]"
+                >
+                  Nejprodávanější kousky
+                </h2>
+              </div>
+
+              <a
+                href="#"
+                class="absolute bottom-0 right-0 hidden items-center gap-2 rounded-full px-4 py-3 text-[15px] text-[#231915] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)] lg:inline-flex"
+              >
+                Zobrazit vše
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              <!-- Card 1 -->
+              <article
+                class="group relative flex h-full flex-col overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.9))] p-6 shadow-[0_10px_30px_rgba(45,25,15,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(45,25,15,0.10)]"
+              >
+                <div
+                  class="pointer-events-none absolute right-[-24px] top-[-24px] h-[120px] w-[120px] rounded-full bg-[rgba(182,58,45,0.07)] blur-3xl"
+                ></div>
+
+                <a href="#" class="flex h-full flex-col">
+                  <div class="relative mb-5 overflow-hidden">
+                    <div
+                      class="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.08),transparent_65%)]"
+                    ></div>
+
+                    <div class="flex h-[250px] items-center justify-center">
+                      <img
+                        src="./assets/productCardDark.png"
+                        alt="Hovězí jerky chilli"
+                        class="h-[250px] w-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(182,58,45,0.10)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#b63a2d]"
+                  >
+                    Hovězí
+                  </div>
+
+                  <h3
+                    class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.02] text-[#231915]"
+                  >
+                    Chilli klasik
+                  </h3>
+
+                  <p
+                    class="mb-6 max-w-[30ch] text-[15px] leading-[1.72] text-[#6b5d53]"
+                  >
+                    Příjemně pálivá klasika, která pořád nechává vyniknout maso.
+                  </p>
+
+                  <div class="mt-auto">
+                    <div class="mb-4 flex items-end justify-between gap-4">
+                      <div class="flex items-end gap-2 leading-none">
+                        <span
+                          class="mb-[3px] text-[13px] font-medium text-[#8a6f5d]"
+                          >od</span
+                        >
+                        <span
+                          class="font-['Roboto_Slab',Georgia,serif] text-[32px] font-bold text-[#231915]"
+                        >
+                          149 Kč
+                        </span>
+                      </div>
+
+                      <span
+                        class="hidden text-[13px] uppercase tracking-[0.08em] text-[#8a6f5d] sm:inline"
+                      >
+                        skladem
+                      </span>
+                    </div>
+
+                    <span
+                      class="flex w-fit items-center justify-center rounded-full bg-[#211d1c] px-10 py-3.5 ml-auto text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+                    >
+                      Detail produktu
+                    </span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Card 2 -->
+              <article
+                class="group relative flex h-full flex-col overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.9))] p-6 shadow-[0_10px_30px_rgba(45,25,15,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(45,25,15,0.10)]"
+              >
+                <div
+                  class="pointer-events-none absolute right-[-24px] top-[-24px] h-[120px] w-[120px] rounded-full bg-[rgba(53,122,86,0.08)] blur-3xl"
+                ></div>
+
+                <a href="#" class="flex h-full flex-col">
+                  <div class="relative mb-5 overflow-hidden">
+                    <div
+                      class="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.08),transparent_65%)]"
+                    ></div>
+
+                    <div class="flex h-[250px] items-center justify-center">
+                      <img
+                        src="./assets/productCardDark.png"
+                        alt="Krůtí jerky bylinky"
+                        class="h-[250px] w-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(53,122,86,0.11)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#357a56]"
+                  >
+                    Krůtí
+                  </div>
+
+                  <h3
+                    class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.02] text-[#231915]"
+                  >
+                    Zelené bylinky
+                  </h3>
+
+                  <p
+                    class="mb-6 max-w-[30ch] text-[15px] leading-[1.72] text-[#6b5d53]"
+                  >
+                    Lehčí profil s jemnou bylinkovou linkou a čistým zakončením.
+                  </p>
+
+                  <div class="mt-auto">
+                    <div class="mb-4 flex items-end justify-between gap-4">
+                      <div class="flex items-end gap-2 leading-none">
+                        <span
+                          class="mb-[3px] text-[13px] font-medium text-[#8a6f5d]"
+                          >od</span
+                        >
+                        <span
+                          class="font-['Roboto_Slab',Georgia,serif] text-[32px] font-bold text-[#231915]"
+                        >
+                          129 Kč
+                        </span>
+                      </div>
+
+                      <span
+                        class="hidden text-[13px] uppercase tracking-[0.08em] text-[#8a6f5d] sm:inline"
+                      >
+                        skladem
+                      </span>
+                    </div>
+
+                    <span
+                      class="flex w-fit items-center justify-center rounded-full bg-[#211d1c] px-10 py-3.5 ml-auto text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+                    >
+                      Detail produktu
+                    </span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Card 3 -->
+              <article
+                class="group relative flex h-full flex-col overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.9))] p-6 shadow-[0_10px_30px_rgba(45,25,15,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(45,25,15,0.10)]"
+              >
+                <div
+                  class="pointer-events-none absolute right-[-24px] top-[-24px] h-[120px] w-[120px] rounded-full bg-[rgba(35,25,21,0.07)] blur-3xl"
+                ></div>
+
+                <a href="#" class="flex h-full flex-col">
+                  <div class="relative mb-5 overflow-hidden">
+                    <div
+                      class="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.08),transparent_65%)]"
+                    ></div>
+
+                    <div class="flex h-[250px] items-center justify-center">
+                      <img
+                        src="./assets/productCardDark.png"
+                        alt="Dárkový balíček"
+                        class="h-[250px] w-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(35,25,21,0.08)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#231915]"
+                  >
+                    Dárkové balení
+                  </div>
+
+                  <h3
+                    class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.02] text-[#231915]"
+                  >
+                    Startovací box
+                  </h3>
+
+                  <p
+                    class="mb-6 max-w-[30ch] text-[15px] leading-[1.72] text-[#6b5d53]"
+                  >
+                    Mix oblíbených příchutí pro ochutnání nebo jako dárek.
+                  </p>
+
+                  <div class="mt-auto">
+                    <div class="mb-4 flex items-end justify-between gap-4">
+                      <div class="flex items-end gap-2 leading-none">
+                        <span
+                          class="mb-[3px] text-[13px] font-medium text-[#8a6f5d]"
+                          >od</span
+                        >
+                        <span
+                          class="font-['Roboto_Slab',Georgia,serif] text-[32px] font-bold text-[#231915]"
+                        >
+                          399 Kč
+                        </span>
+                      </div>
+
+                      <span
+                        class="hidden text-[13px] uppercase tracking-[0.08em] text-[#8a6f5d] sm:inline"
+                      >
+                        skladem
+                      </span>
+                    </div>
+
+                    <span
+                      class="flex w-fit items-center justify-center rounded-full bg-[#211d1c] px-10 py-3.5 ml-auto text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+                    >
+                      Detail produktu
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <div class="mt-8 text-right lg:hidden">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 rounded-full border border-[rgba(62,40,27,0.14)] bg-[rgba(255,255,255,0.62)] px-5 py-3 text-[15px] text-[#231915] transition duration-200 hover:bg-white"
+              >
+                Zobrazit vše
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="bg-[#f7f4ed]">
+        <div class="wrap py-20 md:px-8 lg:px-0">
+          <!-- Why us -->
+          <section id="onas" class="reveal">
+            <!-- Left column -->
+            <article class="relative overflow-hidden md:p-4 lg:p-0">
+              <h2
+                class="mb-20 text-center font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(40px,5.2vw,72px)] leading-[0.95] text-[#231915]"
+              >
+                Náš příběh
+              </h2>
+              <div
+                class="gap-5 lg:grid lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-12 lg:items-start"
+              >
+                <div
+                  class="m-auto mb-15 max-w-[48ch] space-y-5 text-center text-[17px] leading-[1.9] text-[#6b5d53] lg:m-0 lg:ml-auto lg:max-w-[58ch] lg:text-left"
+                >
+                  <p>
+                    Začali jsme sušit maso jen tak pro sebe a u toho posezení v
+                    hospodě nebo na výletech po ČR jsme dali ochutnat kamarádům.
+                    Díky velké odezvě, chvále a podpoře jsme se rozhodli, že si
+                    naše krutopřísně dobré sušené maso nenecháme jen pro nás a
+                    naše kamarády, ale že s tím půjdeme „ven“ a nabídneme ho
+                    široké veřejnosti.
+                  </p>
+
+                  <p>
+                    Z našich mlsných jazýčků, vypracovaných chuťových pohárků a
+                    naší vášně k sušenému masu se stala práce na plný úvazek,
+                    což dalo vzniku značce Maso TMT.
+                  </p>
+
+                  <blockquote
+                    class="bg-[#211d1c] px-5 py-5 text-[#fff8f1] shadow-[0_12px_28px_rgba(20,12,10,0.14)]"
+                  >
+                    <p class="text-[18px] leading-[1.75] md:text-[20px]">
+                      „Děláme věci poctivě, jednoduše a s respektem k surovinám
+                      i k lidem, kteří naše maso ochutnají.“
+                    </p>
+                  </blockquote>
+
+                  <p>
+                    Všechno děláme svépomocí. Každý kousek masa nám projde pod
+                    rukama a naším desaterem je správný postup při sušení
+                    jednotlivých druhů masa. Snažíme se Vám nabídnout kvalitu za
+                    rozumnou cenu. Říká se: Za málo peněz hodně muziky. To u nás
+                    to platí dvojnásob.
+                  </p>
+                  <p>
+                    Velký vděk patří našim přátelům, protože díky nim jsme Maso
+                    TMT!
+                  </p>
+                </div>
+
+                <!-- Right column -->
+                <aside class="relative overflow-hidden">
+                  <img
+                    class="mb-10 w-[180px] md:mb-0 md:w-[290px] mx-auto"
+                    src="./assets/illustrationMeatJerky.png"
+                    alt="Maso TMT"
+                  />
+                </aside>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <div class="bg-[#fffcf7]">
+        <div class="wrap py-20 md:px-8 lg:px-0">
+          <!-- New products -->
+          <section id="produkty" class="reveal md:px-8 lg:px-0">
+            <div class="relative mb-10 flex items-end justify-center">
+              <div class="text-center">
+                <h2
+                  class="font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[clamp(34px,4.6vw,58px)] leading-[1] text-[#231915]"
+                >
+                  Novinky v nabídce
+                </h2>
+              </div>
+
+              <a
+                href="#"
+                class="absolute bottom-0 right-0 hidden items-center gap-2 rounded-full px-4 py-3 text-[15px] text-[#231915] transition duration-300 hover:bg-white/70 hover:shadow-[0_8px_20px_rgba(45,25,15,0.06)] lg:inline-flex"
+              >
+                Zobrazit vše
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              <!-- Card 1 -->
+              <article
+                class="group relative flex h-full flex-col overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.9))] p-6 shadow-[0_10px_30px_rgba(45,25,15,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(45,25,15,0.10)]"
+              >
+                <div
+                  class="pointer-events-none absolute right-[-24px] top-[-24px] h-[120px] w-[120px] rounded-full bg-[rgba(182,58,45,0.07)] blur-3xl"
+                ></div>
+
+                <a href="#" class="flex h-full flex-col">
+                  <div class="relative mb-5 overflow-hidden">
+                    <div
+                      class="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.08),transparent_65%)]"
+                    ></div>
+
+                    <div class="flex h-[250px] items-center justify-center">
+                      <img
+                        src="./assets/productCardDark.png"
+                        alt="Hovězí jerky chilli"
+                        class="h-[250px] w-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(182,58,45,0.10)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#b63a2d]"
+                  >
+                    Hovězí
+                  </div>
+
+                  <h3
+                    class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.02] text-[#231915]"
+                  >
+                    Chilli klasik
+                  </h3>
+
+                  <p
+                    class="mb-6 max-w-[30ch] text-[15px] leading-[1.72] text-[#6b5d53]"
+                  >
+                    Příjemně pálivá klasika, která pořád nechává vyniknout maso.
+                  </p>
+
+                  <div class="mt-auto">
+                    <div class="mb-4 flex items-end justify-between gap-4">
+                      <div class="flex items-end gap-2 leading-none">
+                        <span
+                          class="mb-[3px] text-[13px] font-medium text-[#8a6f5d]"
+                          >od</span
+                        >
+                        <span
+                          class="font-['Roboto_Slab',Georgia,serif] text-[32px] font-bold text-[#231915]"
+                        >
+                          149 Kč
+                        </span>
+                      </div>
+
+                      <span
+                        class="hidden text-[13px] uppercase tracking-[0.08em] text-[#8a6f5d] sm:inline"
+                      >
+                        skladem
+                      </span>
+                    </div>
+
+                    <span
+                      class="flex w-fit items-center justify-center rounded-full bg-[#211d1c] px-10 py-3.5 ml-auto text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+                    >
+                      Detail produktu
+                    </span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Card 2 -->
+              <article
+                class="group relative flex h-full flex-col overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.9))] p-6 shadow-[0_10px_30px_rgba(45,25,15,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(45,25,15,0.10)]"
+              >
+                <div
+                  class="pointer-events-none absolute right-[-24px] top-[-24px] h-[120px] w-[120px] rounded-full bg-[rgba(53,122,86,0.08)] blur-3xl"
+                ></div>
+
+                <a href="#" class="flex h-full flex-col">
+                  <div class="relative mb-5 overflow-hidden">
+                    <div
+                      class="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.08),transparent_65%)]"
+                    ></div>
+
+                    <div class="flex h-[250px] items-center justify-center">
+                      <img
+                        src="./assets/productCardDark.png"
+                        alt="Krůtí jerky bylinky"
+                        class="h-[250px] w-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(53,122,86,0.11)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#357a56]"
+                  >
+                    Krůtí
+                  </div>
+
+                  <h3
+                    class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.02] text-[#231915]"
+                  >
+                    Zelené bylinky
+                  </h3>
+
+                  <p
+                    class="mb-6 max-w-[30ch] text-[15px] leading-[1.72] text-[#6b5d53]"
+                  >
+                    Lehčí profil s jemnou bylinkovou linkou a čistým zakončením.
+                  </p>
+
+                  <div class="mt-auto">
+                    <div class="mb-4 flex items-end justify-between gap-4">
+                      <div class="flex items-end gap-2 leading-none">
+                        <span
+                          class="mb-[3px] text-[13px] font-medium text-[#8a6f5d]"
+                          >od</span
+                        >
+                        <span
+                          class="font-['Roboto_Slab',Georgia,serif] text-[32px] font-bold text-[#231915]"
+                        >
+                          129 Kč
+                        </span>
+                      </div>
+
+                      <span
+                        class="hidden text-[13px] uppercase tracking-[0.08em] text-[#8a6f5d] sm:inline"
+                      >
+                        skladem
+                      </span>
+                    </div>
+
+                    <span
+                      class="flex w-fit items-center justify-center rounded-full bg-[#211d1c] px-10 py-3.5 ml-auto text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+                    >
+                      Detail produktu
+                    </span>
+                  </div>
+                </a>
+              </article>
+
+              <!-- Card 3 -->
+              <article
+                class="group relative flex h-full flex-col overflow-hidden border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,250,244,0.9))] p-6 shadow-[0_10px_30px_rgba(45,25,15,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(45,25,15,0.10)]"
+              >
+                <div
+                  class="pointer-events-none absolute right-[-24px] top-[-24px] h-[120px] w-[120px] rounded-full bg-[rgba(35,25,21,0.07)] blur-3xl"
+                ></div>
+
+                <a href="#" class="flex h-full flex-col">
+                  <div class="relative mb-5 overflow-hidden">
+                    <div
+                      class="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_50%_100%,rgba(255,255,255,0.08),transparent_65%)]"
+                    ></div>
+
+                    <div class="flex h-[250px] items-center justify-center">
+                      <img
+                        src="./assets/productCardDark.png"
+                        alt="Dárkový balíček"
+                        class="h-[250px] w-auto object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 inline-flex w-fit items-center rounded-full bg-[rgba(35,25,21,0.08)] px-[12px] py-[7px] text-[11px] font-semibold uppercase tracking-[0.1em] text-[#231915]"
+                  >
+                    Dárkové balení
+                  </div>
+
+                  <h3
+                    class="mb-3 font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.02] text-[#231915]"
+                  >
+                    Startovací box
+                  </h3>
+
+                  <p
+                    class="mb-6 max-w-[30ch] text-[15px] leading-[1.72] text-[#6b5d53]"
+                  >
+                    Mix oblíbených příchutí pro ochutnání nebo jako dárek.
+                  </p>
+
+                  <div class="mt-auto">
+                    <div class="mb-4 flex items-end justify-between gap-4">
+                      <div class="flex items-end gap-2 leading-none">
+                        <span
+                          class="mb-[3px] text-[13px] font-medium text-[#8a6f5d]"
+                          >od</span
+                        >
+                        <span
+                          class="font-['Roboto_Slab',Georgia,serif] text-[32px] font-bold text-[#231915]"
+                        >
+                          399 Kč
+                        </span>
+                      </div>
+
+                      <span
+                        class="hidden text-[13px] uppercase tracking-[0.08em] text-[#8a6f5d] sm:inline"
+                      >
+                        skladem
+                      </span>
+                    </div>
+
+                    <span
+                      class="flex w-fit items-center justify-center rounded-full bg-[#211d1c] px-10 py-3.5 ml-auto text-[15px] font-semibold text-white transition duration-200 hover:bg-[#3b2d29]"
+                    >
+                      Detail produktu
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <div class="mt-8 text-right lg:hidden">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 rounded-full border border-[rgba(62,40,27,0.14)] bg-[rgba(255,255,255,0.62)] px-5 py-3 text-[15px] text-[#231915] transition duration-200 hover:bg-white"
+              >
+                Zobrazit vše
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="wrap py-20 md:px-8 lg:px-0">
         <!-- Gift CTA -->
-        <section class="pb-[96px]">
+        <section class="reveal pb-[96px]">
           <div
-            class="relative overflow-hidden bg-[url('./assets/dude.png')] bg-no-repeat bg-position-[left_27%] md:bg-position-[88%_27%] text-[#fff8f1] px-6 py-10 md:px-10 md:py-14"
+            class="relative overflow-hidden bg-[url('./assets/dude.png')] bg-no-repeat px-6 py-10 text-[#fff8f1] [background-position:left_27%] md:px-10 md:py-14 md:[background-position:88%_27%]"
           >
             <div
               class="absolute right-[-40px] top-[-20px] h-[180px] w-[180px] rounded-full bg-[rgba(255,255,255,0.06)] blur-3xl"
             ></div>
             <div
-              class="absolute left-[-20px] bottom-[-40px] h-[180px] w-[180px] rounded-full bg-[rgba(182,58,45,0.18)] blur-3xl"
+              class="absolute bottom-[-40px] left-[-20px] h-[180px] w-[180px] rounded-full bg-[rgba(182,58,45,0.18)] blur-3xl"
             ></div>
 
             <div
-              class="relative z-[2] grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-8 items-center"
+              class="relative z-[2] grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto]"
             >
               <div class="max-w-[720px]">
                 <div
-                  class="inline-block mb-4 rounded-full bg-white/10 px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em]"
+                  class="mb-4 inline-block rounded-full bg-white/10 px-[12px] py-[7px] text-[12px] uppercase tracking-[0.08em]"
                 >
                   Dárkové balíčky
                 </div>
@@ -927,17 +1185,17 @@
                 </h2>
 
                 <p
-                  class="mt-4 text-[16px] leading-[1.8] text-[#e8ddd2] max-w-[48ch]"
+                  class="mt-4 max-w-[48ch] text-[16px] leading-[1.8] text-[#e8ddd2]"
                 >
                   Startovací boxy a dárková balení pro lidi, kteří radši
                   dostanou poctivý snack než další zbytečnost do šuplíku.
                 </p>
               </div>
 
-              <div class="flex flex-col sm:flex-row gap-4 mt-auto">
+              <div class="mt-auto flex flex-col gap-4 sm:flex-row">
                 <a
-                  href=""
-                  class="inline-flex items-center justify-center rounded-full h-[52px] min-w-[220px] px-[28px] bg-[linear-gradient(135deg,#b6402c,#8f2f21)] text-[#fff7ef] font-extrabold text-[16px] tracking-[0.01em] shadow-[0_8px_16px_rgba(182,64,44,0.22)] transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-105"
+                  href="#"
+                  class="inline-flex h-[52px] min-w-[220px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#b6402c,#8f2f21)] px-[28px] text-[16px] font-extrabold tracking-[0.01em] text-[#fff7ef] shadow-[0_8px_16px_rgba(182,64,44,0.22)] transition-all duration-200 ease-out hover:-translate-y-[2px] hover:brightness-105"
                 >
                   Vybrat balíček
                 </a>
@@ -947,11 +1205,10 @@
         </section>
 
         <!-- Benefits strip -->
-        <div class="pb-[92px]">
+        <div>
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 pt-[18px]"
+            class="reveal grid grid-cols-1 gap-5 pt-[18px] sm:grid-cols-2 xl:grid-cols-4"
           >
-            <!-- Card 1 -->
             <article
               class="group relative overflow-hidden rounded-[24px] border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(255,250,244,0.68))] p-5 shadow-[0_10px_30px_rgba(45,25,15,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(45,25,15,0.08)]"
             >
@@ -960,7 +1217,7 @@
               ></div>
 
               <div
-                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#231714] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
+                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#211d1c] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -969,6 +1226,7 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                   class="h-5 w-5"
+                  aria-hidden="true"
                 >
                   <path d="M3 7h11v8H3z" />
                   <path d="M14 10h3l3 3v2h-6z" />
@@ -978,7 +1236,7 @@
               </div>
 
               <strong
-                class="block mb-2 text-[20px] leading-[1.15] text-[#231915]"
+                class="mb-2 block text-[20px] leading-[1.15] text-[#231915]"
               >
                 Doprava zdarma
               </strong>
@@ -988,7 +1246,6 @@
               </p>
             </article>
 
-            <!-- Card 2 -->
             <article
               class="group relative overflow-hidden rounded-[24px] border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(255,250,244,0.68))] p-5 shadow-[0_10px_30px_rgba(45,25,15,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(45,25,15,0.08)]"
             >
@@ -997,7 +1254,7 @@
               ></div>
 
               <div
-                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#231714] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
+                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#211d1c] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1006,6 +1263,7 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                   class="h-5 w-5"
+                  aria-hidden="true"
                 >
                   <path d="M7 4v16" />
                   <path d="M17 4v16" />
@@ -1017,7 +1275,7 @@
               </div>
 
               <strong
-                class="block mb-2 text-[20px] leading-[1.15] text-[#231915]"
+                class="mb-2 block text-[20px] leading-[1.15] text-[#231915]"
               >
                 Malé série
               </strong>
@@ -1027,7 +1285,6 @@
               </p>
             </article>
 
-            <!-- Card 3 -->
             <article
               class="group relative overflow-hidden rounded-[24px] border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(255,250,244,0.68))] p-5 shadow-[0_10px_30px_rgba(45,25,15,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(45,25,15,0.08)]"
             >
@@ -1036,7 +1293,7 @@
               ></div>
 
               <div
-                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#231714] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
+                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#211d1c] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1045,6 +1302,7 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                   class="h-5 w-5"
+                  aria-hidden="true"
                 >
                   <path d="M6 4h9l3 3v13H6z" />
                   <path d="M15 4v3h3" />
@@ -1053,7 +1311,7 @@
               </div>
 
               <strong
-                class="block mb-2 text-[20px] leading-[1.15] text-[#231915]"
+                class="mb-2 block text-[20px] leading-[1.15] text-[#231915]"
               >
                 Přehledné složení
               </strong>
@@ -1063,7 +1321,6 @@
               </p>
             </article>
 
-            <!-- Card 4 -->
             <article
               class="group relative overflow-hidden rounded-[24px] border border-[rgba(60,37,23,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.78),rgba(255,250,244,0.68))] p-5 shadow-[0_10px_30px_rgba(45,25,15,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_rgba(45,25,15,0.08)]"
             >
@@ -1072,7 +1329,7 @@
               ></div>
 
               <div
-                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#231714] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
+                class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#211d1c] text-[#fff8f1] shadow-[0_8px_18px_rgba(35,23,20,0.18)]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1081,6 +1338,7 @@
                   stroke="currentColor"
                   stroke-width="1.8"
                   class="h-5 w-5"
+                  aria-hidden="true"
                 >
                   <circle cx="12" cy="12" r="8" />
                   <path d="M12 8v4l3 2" />
@@ -1088,7 +1346,7 @@
               </div>
 
               <strong
-                class="block mb-2 text-[20px] leading-[1.15] text-[#231915]"
+                class="mb-2 block text-[20px] leading-[1.15] text-[#231915]"
               >
                 Rychlé doručení
               </strong>
@@ -1102,13 +1360,310 @@
       </div>
     </main>
 
+    <!-- Mobile sticky cart bar -->
+    <div class="fixed inset-x-0 bottom-0 z-[60] bg-[#211d1c] p-4 md:hidden">
+      <a
+        href="/kosik"
+        class="mx-auto flex w-full max-w-[720px] items-center justify-between gap-4 rounded-full border border-white/14 bg-[#211d1c] px-5 py-4 text-[#fff8f1] ring-1 ring-white/10 shadow-[0_12px_28px_rgba(20,12,10,0.24),0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-sm"
+        aria-label="Pokračovat do košíku"
+      >
+        <div class="flex min-w-0 items-center gap-3">
+          <span
+            class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7"
+              />
+              <circle cx="10" cy="19" r="1.5" />
+              <circle cx="17" cy="19" r="1.5" />
+            </svg>
+          </span>
+
+          <div class="min-w-0">
+            <div
+              class="truncate text-xs uppercase tracking-[0.08em] text-white/65"
+            >
+              Váš Košík
+            </div>
+            <div class="truncate text-sm font-semibold">2 položky · 340 Kč</div>
+          </div>
+        </div>
+
+        <span
+          class="inline-flex shrink-0 items-center gap-2 text-sm font-semibold"
+        >
+          Do košíku
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-4 w-4"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
+
     <!-- Footer -->
-    <footer
-      class="p-9 bg-[#231714] text-[#fff8f1] text-center font-['Roboto_Slab']"
-    >
-      <div class="wrap">
-        <b>Kontaktujte nás:</b> TMT Maso - Chlumecka 1, Chlumec
+    <footer class="mt-20 bg-[#211d1c] text-[#fff8f1]">
+      <div
+        class="wrap grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4 md:px-8 lg:px-0"
+      >
+        <div>
+          <img
+            class="mb-6 w-[180px]"
+            src="./assets/logo.svg"
+            alt="Logo TMT maso"
+          />
+        </div>
+
+        <div>
+          <h4
+            class="mb-6 block font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.15]"
+          >
+            Informace
+          </h4>
+
+          <a class="my-2 block hover:opacity-80" href="/" aria-label="O nás"
+            >O nás</a
+          >
+          <a
+            class="my-2 block hover:opacity-80"
+            href="/"
+            aria-label="Doprava a platba"
+            >Doprava a platba</a
+          >
+          <a
+            class="my-2 block hover:opacity-80"
+            href="/"
+            aria-label="Obchodní podmínky"
+            >Obchodní podmínky</a
+          >
+          <a class="my-2 block hover:opacity-80" href="/" aria-label="Reklamace"
+            >Reklamace</a
+          >
+        </div>
+
+        <div>
+          <h4
+            class="mb-6 block font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.15]"
+          >
+            Spojme se
+          </h4>
+          Instagram / FB widget?
+        </div>
+
+        <div>
+          <h4
+            class="mb-6 block font-['Kenyan_Coffee_Rg','Roboto_Slab',Georgia,serif] text-[26px] leading-[1.15]"
+          >
+            Kontakt
+          </h4>
+
+          <div class="space-y-3">
+            <a
+              class="group flex items-center gap-3 hover:opacity-80"
+              href="mailto:info@masotmt.cz"
+              aria-label="E-mail"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#fff8f1] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 6h16v12H4z" />
+                  <path d="M4 8l8 6 8-6" />
+                </svg>
+              </span>
+              <span>info@masotmt.cz</span>
+            </a>
+
+            <a
+              class="group flex items-center gap-3 hover:opacity-80"
+              href="tel:+420xxxxxxxxx"
+              aria-label="Zavolat na +420xxxxxxxxx"
+            >
+              <span
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#fff8f1] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.62a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.46-1.29a2 2 0 0 1 2.11-.45c.84.3 1.72.51 2.62.63A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </span>
+              <span>+420 xxx xxx xxx</span>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navList = document.getElementById("desktop-nav-list");
+      const moreWrap = document.getElementById("desktop-nav-more");
+      const overflowList = document.getElementById("desktop-nav-overflow-list");
+
+      if (!navList || !moreWrap || !overflowList) return;
+
+      const originalItems = Array.from(
+        navList.querySelectorAll("[data-nav-item]"),
+      );
+      const navContainer = navList.parentElement;
+
+      const createOverflowLink = (item) => {
+        const sourceLink = item.querySelector("a");
+        if (!sourceLink) return null;
+
+        const link = document.createElement("a");
+        link.href = sourceLink.getAttribute("href") || "#";
+        link.innerHTML = sourceLink.innerHTML;
+        link.className =
+          "block rounded-[12px] px-4 py-3 text-[14px] font-medium tracking-normal text-[#231915] transition hover:bg-[rgba(35,23,20,0.05)]";
+
+        return link;
+      };
+
+      const getOverflowCandidate = () => {
+        const visibleItems = Array.from(navList.children);
+
+        return (
+          [...visibleItems]
+            .reverse()
+            .find((item) => !item.hasAttribute("data-keep-visible")) || null
+        );
+      };
+
+      const getGapWidth = () => {
+        const styles = window.getComputedStyle(navList);
+        return parseFloat(styles.columnGap || styles.gap || "0") || 0;
+      };
+
+      const getItemWidth = (item) => {
+        return item.getBoundingClientRect().width;
+      };
+
+      const getVisibleItemsWidth = () => {
+        const items = Array.from(navList.children);
+        if (items.length === 0) return 0;
+
+        const gap = getGapWidth();
+        const itemsWidth = items.reduce(
+          (sum, item) => sum + getItemWidth(item),
+          0,
+        );
+        const gapsWidth = gap * Math.max(items.length - 1, 0);
+
+        return itemsWidth + gapsWidth;
+      };
+
+      const getMoreReservedWidth = () => {
+        moreWrap.classList.remove("hidden");
+        const styles = window.getComputedStyle(moreWrap);
+        const marginLeft = parseFloat(styles.marginLeft) || 0;
+        const width = moreWrap.getBoundingClientRect().width + marginLeft;
+        moreWrap.classList.add("hidden");
+        return width;
+      };
+
+      const rebalanceNav = () => {
+        originalItems.forEach((item) => navList.appendChild(item));
+        overflowList.innerHTML = "";
+        moreWrap.classList.add("hidden");
+
+        if (window.innerWidth < 768 || !navContainer) return;
+
+        const movedItems = [];
+        const availableWidth = navContainer.getBoundingClientRect().width;
+        const moreReservedWidth = getMoreReservedWidth();
+
+        while (navList.children.length > 0) {
+          const visibleWidth = getVisibleItemsWidth();
+          const reservedWidth = movedItems.length > 0 ? moreReservedWidth : 0;
+          const totalNeeded = visibleWidth + reservedWidth;
+
+          if (totalNeeded <= availableWidth + 1) break;
+
+          const candidate = getOverflowCandidate();
+          if (!candidate) break;
+
+          movedItems.unshift(candidate);
+          candidate.remove();
+        }
+
+        if (movedItems.length > 0) {
+          moreWrap.classList.remove("hidden");
+
+          movedItems.forEach((item) => {
+            const link = createOverflowLink(item);
+            if (link) overflowList.appendChild(link);
+          });
+        }
+      };
+
+      let rafId = null;
+      const requestRebalance = () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => {
+          rebalanceNav();
+          rafId = null;
+        });
+      };
+
+      requestRebalance();
+      window.addEventListener("resize", requestRebalance);
+      window.addEventListener("load", requestRebalance);
+
+      if ("ResizeObserver" in window && navContainer) {
+        const observer = new ResizeObserver(requestRebalance);
+        observer.observe(navContainer);
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    });
+  </script>
 </html>

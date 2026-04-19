@@ -18,3 +18,488 @@
   width: min(1200px, calc(100% - 48px));
   margin: 0 auto;
 }
+
+.gift-type-picker summary::-webkit-details-marker {
+  display: none;
+}
+
+.gift-type-menu {
+  display: none;
+}
+
+.gift-type-picker[open] .gift-type-menu {
+  display: block;
+}
+
+.gift-type-panel {
+  display: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (min-width: 900px) {
+  .gift-type-panel {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.slot-1:has(#s1-type-beef:checked) .panel-beef,
+.slot-1:has(#s1-type-pork:checked) .panel-pork,
+.slot-1:has(#s1-type-turkey:checked) .panel-turkey,
+.slot-1:has(#s1-type-chicken:checked) .panel-chicken,
+.slot-2:has(#s2-type-beef:checked) .panel-beef,
+.slot-2:has(#s2-type-pork:checked) .panel-pork,
+.slot-2:has(#s2-type-turkey:checked) .panel-turkey,
+.slot-2:has(#s2-type-chicken:checked) .panel-chicken {
+  display: grid;
+}
+
+.gift-type-label {
+  transition: all 180ms ease;
+}
+
+.slot-1:has(#s1-type-beef:checked) .gift-type-label[data-type="beef"],
+.slot-1:has(#s1-type-pork:checked) .gift-type-label[data-type="pork"],
+.slot-1:has(#s1-type-turkey:checked) .gift-type-label[data-type="turkey"],
+.slot-1:has(#s1-type-chicken:checked) .gift-type-label[data-type="chicken"],
+.slot-2:has(#s2-type-beef:checked) .gift-type-label[data-type="beef"],
+.slot-2:has(#s2-type-pork:checked) .gift-type-label[data-type="pork"],
+.slot-2:has(#s2-type-turkey:checked) .gift-type-label[data-type="turkey"],
+.slot-2:has(#s2-type-chicken:checked) .gift-type-label[data-type="chicken"],
+.slot-jar-1:has(#jar1-type-pork:checked) label[for="jar1-type-pork"],
+.slot-jar-1:has(#jar1-type-beef:checked) label[for="jar1-type-beef"],
+.slot-jar-2:has(#jar2-type-pork:checked) label[for="jar2-type-pork"],
+.slot-jar-2:has(#jar2-type-beef:checked) label[for="jar2-type-beef"],
+.slot-drink:has(#drink-type-champagne:checked)
+  label[for="drink-type-champagne"],
+.slot-drink:has(#drink-type-redbull:checked) label[for="drink-type-redbull"],
+.slot-drink:has(#drink-type-bozkov:checked) label[for="drink-type-bozkov"] {
+  background: rgba(35, 25, 21, 0.06);
+}
+
+.gift-selected-type::before {
+  content: "";
+}
+
+.slot-1 .gift-selected-type::before,
+.slot-2 .gift-selected-type::before {
+  content: "Vyber druh masa";
+}
+
+.slot-jar-1 .gift-selected-type::before,
+.slot-jar-2 .gift-selected-type::before {
+  content: "Vyber maso ve vlastní šťávě";
+}
+
+.slot-drink .gift-selected-type::before {
+  content: "Vyber nápoj";
+}
+
+.slot-1:has(#s1-type-beef:checked) .gift-selected-type::before,
+.slot-2:has(#s2-type-beef:checked) .gift-selected-type::before {
+  content: "Hovězí";
+}
+
+.slot-1:has(#s1-type-pork:checked) .gift-selected-type::before,
+.slot-2:has(#s2-type-pork:checked) .gift-selected-type::before {
+  content: "Vepřové";
+}
+
+.slot-1:has(#s1-type-turkey:checked) .gift-selected-type::before,
+.slot-2:has(#s2-type-turkey:checked) .gift-selected-type::before {
+  content: "Krůtí";
+}
+
+.slot-1:has(#s1-type-chicken:checked) .gift-selected-type::before,
+.slot-2:has(#s2-type-chicken:checked) .gift-selected-type::before {
+  content: "Kuřecí";
+}
+
+.slot-jar-1:has(#jar1-type-pork:checked) .gift-selected-type::before {
+  content: "Vepřové ve vlastní šťávě (130 g)";
+}
+
+.slot-jar-1:has(#jar1-type-beef:checked) .gift-selected-type::before {
+  content: "Hovězí ve vlastní šťávě (130 g)";
+}
+
+.slot-jar-2:has(#jar2-type-pork:checked) .gift-selected-type::before {
+  content: "Vepřové ve vlastní šťávě (130 g)";
+}
+
+.slot-jar-2:has(#jar2-type-beef:checked) .gift-selected-type::before {
+  content: "Hovězí ve vlastní šťávě (130 g)";
+}
+
+.slot-drink:has(#drink-type-champagne:checked) .gift-selected-type::before {
+  content: "Šampaňské láhev 0,25 l";
+}
+
+.slot-drink:has(#drink-type-redbull:checked) .gift-selected-type::before {
+  content: "Red Bull plech 0,25 l";
+}
+
+.slot-drink:has(#drink-type-bozkov:checked) .gift-selected-type::before {
+  content: "Božkov plech 0,25 l";
+}
+
+.gift-flavor-card {
+  position: relative;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 12px 10px 10px;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+.gift-flavor-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-top: 12px;
+}
+
+.gift-flavor-card-title {
+  font-size: 12px;
+  line-height: 1.22;
+  font-weight: 700;
+  color: inherit;
+  text-wrap: balance;
+}
+
+.gift-flavor-note {
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #6b5d53;
+}
+
+.gift-flavor-pill {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: rgba(35, 25, 21, 0.08);
+  color: #6f5a4d;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.gift-flavor-card:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.gift-flavor-input:checked + .gift-flavor-card {
+  border-color: #231915;
+  background: rgba(35, 25, 21, 0.96);
+  color: #fffaf5;
+  box-shadow: 0 12px 24px rgba(45, 25, 15, 0.12);
+}
+
+.gift-flavor-input:checked + .gift-flavor-card .gift-flavor-note {
+  color: rgba(255, 250, 245, 0.72);
+}
+
+.gift-flavor-input:checked + .gift-flavor-card .gift-flavor-pill {
+  background: rgba(255, 250, 245, 0.14);
+  color: rgba(255, 250, 245, 0.88);
+}
+
+.slot-1:has(#s1-type-beef:checked):not(
+    :has(input[name="s1-beef-flavor"]:checked)
+  )
+  label[for="s1-beef-klasik"],
+.slot-1:has(#s1-type-pork:checked):not(
+    :has(input[name="s1-pork-flavor"]:checked)
+  )
+  label[for="s1-pork-uzeny-pepr"],
+.slot-1:has(#s1-type-turkey:checked):not(
+    :has(input[name="s1-turkey-flavor"]:checked)
+  )
+  label[for="s1-turkey-bylinky"],
+.slot-1:has(#s1-type-chicken:checked):not(
+    :has(input[name="s1-chicken-flavor"]:checked)
+  )
+  label[for="s1-chicken-med-pepr"],
+.slot-2:has(#s2-type-beef:checked):not(
+    :has(input[name="s2-beef-flavor"]:checked)
+  )
+  label[for="s2-beef-klasik"],
+.slot-2:has(#s2-type-pork:checked):not(
+    :has(input[name="s2-pork-flavor"]:checked)
+  )
+  label[for="s2-pork-uzeny-pepr"],
+.slot-2:has(#s2-type-turkey:checked):not(
+    :has(input[name="s2-turkey-flavor"]:checked)
+  )
+  label[for="s2-turkey-bylinky"],
+.slot-2:has(#s2-type-chicken:checked):not(
+    :has(input[name="s2-chicken-flavor"]:checked)
+  )
+  label[for="s2-chicken-med-pepr"] {
+  border-color: #231915;
+  background: rgba(35, 25, 21, 0.96);
+  color: #fffaf5;
+  box-shadow: 0 12px 24px rgba(45, 25, 15, 0.12);
+}
+
+.slot-1:has(#s1-type-beef:checked):not(
+    :has(input[name="s1-beef-flavor"]:checked)
+  )
+  label[for="s1-beef-klasik"]
+  .gift-flavor-note,
+.slot-1:has(#s1-type-pork:checked):not(
+    :has(input[name="s1-pork-flavor"]:checked)
+  )
+  label[for="s1-pork-uzeny-pepr"]
+  .gift-flavor-note,
+.slot-1:has(#s1-type-turkey:checked):not(
+    :has(input[name="s1-turkey-flavor"]:checked)
+  )
+  label[for="s1-turkey-bylinky"]
+  .gift-flavor-note,
+.slot-1:has(#s1-type-chicken:checked):not(
+    :has(input[name="s1-chicken-flavor"]:checked)
+  )
+  label[for="s1-chicken-med-pepr"]
+  .gift-flavor-note,
+.slot-2:has(#s2-type-beef:checked):not(
+    :has(input[name="s2-beef-flavor"]:checked)
+  )
+  label[for="s2-beef-klasik"]
+  .gift-flavor-note,
+.slot-2:has(#s2-type-pork:checked):not(
+    :has(input[name="s2-pork-flavor"]:checked)
+  )
+  label[for="s2-pork-uzeny-pepr"]
+  .gift-flavor-note,
+.slot-2:has(#s2-type-turkey:checked):not(
+    :has(input[name="s2-turkey-flavor"]:checked)
+  )
+  label[for="s2-turkey-bylinky"]
+  .gift-flavor-note,
+.slot-2:has(#s2-type-chicken:checked):not(
+    :has(input[name="s2-chicken-flavor"]:checked)
+  )
+  label[for="s2-chicken-med-pepr"]
+  .gift-flavor-note {
+  color: rgba(255, 250, 245, 0.72);
+}
+
+.slot-1:has(#s1-type-beef:checked):not(
+    :has(input[name="s1-beef-flavor"]:checked)
+  )
+  label[for="s1-beef-klasik"]
+  .gift-flavor-pill,
+.slot-1:has(#s1-type-pork:checked):not(
+    :has(input[name="s1-pork-flavor"]:checked)
+  )
+  label[for="s1-pork-uzeny-pepr"]
+  .gift-flavor-pill,
+.slot-1:has(#s1-type-turkey:checked):not(
+    :has(input[name="s1-turkey-flavor"]:checked)
+  )
+  label[for="s1-turkey-bylinky"]
+  .gift-flavor-pill,
+.slot-1:has(#s1-type-chicken:checked):not(
+    :has(input[name="s1-chicken-flavor"]:checked)
+  )
+  label[for="s1-chicken-med-pepr"]
+  .gift-flavor-pill,
+.slot-2:has(#s2-type-beef:checked):not(
+    :has(input[name="s2-beef-flavor"]:checked)
+  )
+  label[for="s2-beef-klasik"]
+  .gift-flavor-pill,
+.slot-2:has(#s2-type-pork:checked):not(
+    :has(input[name="s2-pork-flavor"]:checked)
+  )
+  label[for="s2-pork-uzeny-pepr"]
+  .gift-flavor-pill,
+.slot-2:has(#s2-type-turkey:checked):not(
+    :has(input[name="s2-turkey-flavor"]:checked)
+  )
+  label[for="s2-turkey-bylinky"]
+  .gift-flavor-pill,
+.slot-2:has(#s2-type-chicken:checked):not(
+    :has(input[name="s2-chicken-flavor"]:checked)
+  )
+  label[for="s2-chicken-med-pepr"]
+  .gift-flavor-pill {
+  background: rgba(255, 250, 245, 0.14);
+  color: rgba(255, 250, 245, 0.88);
+}
+
+.summary-s1::before,
+.summary-s2::before,
+.summary-jar-1::before,
+.summary-jar-2::before,
+.summary-drink::before {
+  content: "Nevybráno";
+  color: #6b5d53;
+}
+
+.gift-config:has(#s1-type-beef:checked) .summary-s1::before {
+  content: "Hovězí – Klasik (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-beef-smoke:checked) .summary-s1::before {
+  content: "Hovězí – Smoke (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-type-pork:checked) .summary-s1::before {
+  content: "Vepřové – Uzený pepř (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-pork-cesnek:checked) .summary-s1::before {
+  content: "Vepřové – Česnek (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-type-turkey:checked) .summary-s1::before {
+  content: "Krůtí – Bylinky (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-turkey-sul:checked) .summary-s1::before {
+  content: "Krůtí – Solené (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-type-chicken:checked) .summary-s1::before {
+  content: "Kuřecí – Med & pepř (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s1-chicken-bbq:checked) .summary-s1::before {
+  content: "Kuřecí – BBQ (50 g)";
+  color: #231915;
+}
+
+.gift-config:has(#s2-type-beef:checked) .summary-s2::before {
+  content: "Hovězí – Klasik (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-beef-smoke:checked) .summary-s2::before {
+  content: "Hovězí – Smoke (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-type-pork:checked) .summary-s2::before {
+  content: "Vepřové – Uzený pepř (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-pork-cesnek:checked) .summary-s2::before {
+  content: "Vepřové – Česnek (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-type-turkey:checked) .summary-s2::before {
+  content: "Krůtí – Bylinky (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-turkey-sul:checked) .summary-s2::before {
+  content: "Krůtí – Solené (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-type-chicken:checked) .summary-s2::before {
+  content: "Kuřecí – Med & pepř (50 g)";
+  color: #231915;
+}
+.gift-config:has(#s2-chicken-bbq:checked) .summary-s2::before {
+  content: "Kuřecí – BBQ (50 g)";
+  color: #231915;
+}
+
+.gift-config:has(#jar1-type-pork:checked) .summary-jar-1::before {
+  content: "Vepřové ve vlastní šťávě (130 g)";
+  color: #231915;
+}
+
+.gift-config:has(#jar1-type-beef:checked) .summary-jar-1::before {
+  content: "Hovězí ve vlastní šťávě (130 g)";
+  color: #231915;
+}
+
+.gift-config:has(#jar2-type-pork:checked) .summary-jar-2::before {
+  content: "Vepřové ve vlastní šťávě (130 g)";
+  color: #231915;
+}
+
+.gift-config:has(#jar2-type-beef:checked) .summary-jar-2::before {
+  content: "Hovězí ve vlastní šťávě (130 g)";
+  color: #231915;
+}
+
+.gift-config:has(#drink-type-champagne:checked) .summary-drink::before {
+  content: "Šampaňské láhev 0,25 l";
+  color: #231915;
+}
+
+.gift-config:has(#drink-type-redbull:checked) .summary-drink::before {
+  content: "Red Bull plech 0,25 l";
+  color: #231915;
+}
+
+.gift-config:has(#drink-type-bozkov:checked) .summary-drink::before {
+  content: "Božkov plech 0,25 l";
+  color: #231915;
+}
+
+@keyframes fade-up-soft {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  opacity: 0;
+  animation: fade-up-soft 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-reveal-delay-1 {
+  animation-delay: 120ms;
+}
+.hero-reveal-delay-2 {
+  animation-delay: 220ms;
+}
+.hero-reveal-delay-3 {
+  animation-delay: 320ms;
+}
+
+@keyframes hero-breathe {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.04);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(116px);
+  transition:
+    opacity 1700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
